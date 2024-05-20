@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="Assets/Images/logo.png" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="Assets/css/menu-info.css" />
+
+    <!-- Fonts -->
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <title>Menu-info</title>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <a href="index.html"
+          ><img class="logo" src="Assets/Images/logo.png" alt=""
+        /></a>
+        <ul>
+          <li>
+            <a class="nav-menu" href="plan.html"><span>Plans</span></a>
+          </li>
+          <li>
+            <a class="nav-menu" href="how.html"><span>How it Works</span></a>
+          </li>
+          <li>
+            <a class="nav-menu" href="menu.html"><span>Menu</span></a>
+          </li>
+          <li>
+            <a href="login.html" id="loginBtn" class="button">Login</a>
+          </li>
+          <li>
+            <a href="signup.html" id="signupBtn" class="button dark-btn"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="hidden">
+      <div class="menu-info">
+        <div class="menu-info-box">
+          <div class="menu-info-content">
+            <h1>Sườn Xào Chua Ngọt</h1>
+            <h3><i class="fa-solid fa-tag"></i> Rice</h3>
+            <div class="menu-info-icon">
+              <div><i class="fa-regular fa-clock"></i>20 Min</div>
+              <div><i class="fa-solid fa-carrot"></i>710 Cals</div>
+              <div class="menu-info-price">
+                <i class="fa-solid fa-money-bill"></i>50.000 VND
+              </div>
+            </div>
+            <div class="menu-info-describe">
+              <p>
+                Sườn xào chua ngọt là một món ăn phổ biến trong ẩm thực Việt Nam,
+                kết hợp giữa vị chua dịu từ nước mắm, đường và vị thơm của tỏi,
+                hành tím cùng với sự ngọt ngào tự nhiên của thịt sườn.
+              </p>
+            </div>
+  
+            <div class="menu-section-end">
+              <div class="menu-info-selection">
+                <h3>Type</h3>
+                <div class="button-selection">
+                  <button id="meal-kit" class="enable-selection">
+                    Meal Kits
+                  </button>
+                  <button id="prepare-meal">Prepared Meals</button>
+                </div>
+              </div>
+  
+              <div class="menu-info-quantity">
+                <h3>Quantity</h3>
+                <button id="decrement" class="button-quantity">
+                  <svg
+                    enable-background="new 0 0 10 10"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    y="0"
+                    class="svg-icon"
+                  >
+                    <polygon
+                      points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"
+                    ></polygon>
+                  </svg>
+                </button>
+                <input
+                  type="text"
+                  role="spinbutton"
+                  value="1"
+                  class="button-quantity input-quantity"
+                />
+                <button id="increment" class="button-quantity">
+                  <svg
+                    enable-background="new 0 0 10 10"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    y="0"
+                    class="svg-icon icon-plus-sign"
+                  >
+                    <polygon
+                      points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"
+                    ></polygon>
+                  </svg>
+                </button>
+              </div>
+  
+              <button class="button dark-btn">
+                Add To Cart <i class="fa-solid fa-cart-shopping cart-i"></i>
+              </button>
+            </div>
+          </div>
+  
+          <div class="menu-info-img">
+            <img src="Assets/Images/food/food1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="hidden">
+      <div class="ingredient">
+        <div class="menu-ingredient">
+          <div class="menu-ingredient-img">
+            <img src="Assets/Images/ingredient.jpg" alt="" />
+          </div>
+          <div class="menu-ingredient-info">
+            <h3>Fresh Ingredient</h3>
+            <ul>
+              <li>
+                <span class="ingredient-quatity">500g</span>
+                <span class="ingredient-name">Sườn heo</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity">1 củ</span>
+                <span class="ingredient-name">Hành tím</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity"> 3-4 tép</span>
+                <span class="ingredient-name">Tỏi</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity">1 trái</span>
+                <span class="ingredient-name">Ớt chuông</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity">2-3 muỗng canh</span>
+                <span class="ingredient-name">Dầu ăn</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity">500g</span>
+                <span class="ingredient-name">Nước mắm</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity">500g</span>
+                <span class="ingredient-name">Đường</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity">1 ít</span>
+                <span class="ingredient-name">Bột năng</span>
+              </li>
+              <li>
+                <span class="ingredient-quatity">1 ít</span>
+                <span class="ingredient-name">Gia vị thông dụng</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="hidden">
+      <div class="instruction">
+        <div class="instruction-main">
+          <div class="instruction-header">
+            <h2>Intructions Guide</h2>
+          </div>
+          <div class="instruction-step">
+            <div class="step">
+              <div class="step-img">
+                <img src="Assets/Images/step/Step 1.png" alt="" />
+              </div>
+              <div class="step-content">
+                <div class="step-circle">
+                  <span class="number-step">1</span>
+                </div>
+                <div class="step-text">
+                  <p>
+                    Rửa sạch sườn với nước muối pha loãng và để ráo nước. Thái
+                    sườn thành từng miếng nhỏ vừa ăn. Rửa, sơ chế tất cả các loại
+                    rau củ và nguyên liệu
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="step">
+              <div class="step-img">
+                <img src="Assets/Images/step/Step 2.png" alt="" />
+              </div>
+              <div class="step-content">
+                <div class="step-circle">
+                  <span class="number-step">2</span>
+                </div>
+                <div class="step-text">
+                  <p>
+                    Đun nóng dầu ăn trong chảo. Thêm hành tím và tỏi vào phi thơm.
+                    Đưa sườn vào xào đều cho đến khi sườn chín và có màu vàng đều.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="step">
+              <div class="step-img">
+                <img src="Assets/Images/step/Step 3.png" alt="" />
+              </div>
+              <div class="step-content">
+                <div class="step-circle">
+                  <span class="number-step">3</span>
+                </div>
+                <div class="step-text">
+                  <p>
+                    Khi sườn đã chín, thêm nước mắm, đường và ớt chuông vào chảo.
+                    Khuấy đều. Nêm thêm gia vị nếu cần thiết, tùy khẩu vị cá nhân.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="step">
+              <div class="step-img">
+                <img src="Assets/Images/step/Step 4.png" alt="" />
+              </div>
+              <div class="step-content">
+                <div class="step-circle">
+                  <span class="number-step">4</span>
+                </div>
+                <div class="step-text">
+                  <p>
+                    Đảo đều sườn trong gia vị cho đến khi gia vị thấm đều vào sườn
+                    và sườn có vị ngọt chua đều đặn.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="step">
+              <div class="step-img">
+                <img src="Assets/Images/step/Step 5.png" alt="" />
+              </div>
+              <div class="step-content">
+                <div class="step-circle">
+                  <span class="number-step">5</span>
+                </div>
+                <div class="step-text">
+                  <p>
+                    Tắt bếp và trình bày sườn xào chua ngọt ra đĩa. Trang trí bằng
+                    ít hành lá hoặc ớt sẽ làm món ăn trở nên hấp dẫn hơn.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="step">
+              <div class="step-img">
+                <img src="Assets/Images/step/Step 6.png" alt="" />
+              </div>
+              <div class="step-content">
+                <div class="step-circle">
+                  <span class="number-step">6</span>
+                </div>
+                <div class="step-text">
+                  <p>
+                    Sườn xào chua ngọt có thể được thưởng thức ngay khi nóng hoặc
+                    ấm. Dùng cùng cơm trắng nóng sẽ ngon hơn. Lưu ý: Đảm bảo sườn
+                    chín đều và gia vị thấm đều vào sườn để có một món sườn xào
+                    chua ngọt ngon và hấp dẫn.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="hidden">
+      <div class="menu-like">
+        <div class="menu-like-header">
+          <h3>You might also like...</h3>
+        </div>
+
+        <div class="swiper food-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide menu-box">
+              <a href="menu-info.html">
+                <img src="Assets/Images/food/food1.jpg" alt="" />
+                <div class="menu-text">
+                  <small>Rice</small>
+                  <h2>Sườn Chua Ngọt</h2>
+                  <p>
+                    Food provide essensial nutriels for overall health and
+                    well-being
+                  </p>
+                </div>
+                <div class="menu-min-price">
+                  <div class="menu-min">
+                    <i class="fa-regular fa-clock menu-min-icon"></i>
+                    <small> 25 Min</small>
+                  </div>
+                  <small class="menu-price">50.000 VND</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>
+        <p>Email : FreshMeal@contact.com</p>
+        <p>Address: FPTU Ho Chi Minh</p>
+
+        <h5>&copy; Copyright 2024. All Rights Reserved</h5>
+      </div>
+    </div>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Main -->
+    <script src="Js/swiper-api.js"></script>
+    <script src="Js/memu-info.js"></script>
+    <script src="Js/index.js"></script>
+  </body>
+</html>

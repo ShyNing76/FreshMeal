@@ -1,0 +1,241 @@
+.header-contain {
+    margin-top: 110px;
+    background-color: #f4faf2;
+    padding-bottom: 20px;
+    border-width: 3px;
+}
+
+.header-contain .header-menu {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-contain .header-menu h1 {
+    color: #81d34a;
+}
+
+.header-contain .weekly-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header-contain .weekly-nav a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0px 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border: solid 1px #4b9e13;
+}
+
+.header-contain .weekly-nav span {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.header-contain .weekly-nav a:hover {
+    background-color: #b5ee7f;
+}
+
+
+.weekly-choose {
+    background-color: #95d857;
+}
+
+/* Menu-category */
+.menu-contain {
+    margin-bottom: 20px;
+}
+
+.menu-contain .menu-category {
+    display: flex;
+    text-align: center;
+    padding: 10px 10%;
+    background: #fff;
+}
+
+.menu-contain .menu-category .menu-option img {
+    width: 50%;
+    background-color: #b5ee7f;
+    border-radius: 50px;
+    padding: 8px;
+    border: #81d34a 1px solid;
+    box-shadow: 0 5px 15px rgba(145, 245, 79, 0.35);
+}
+
+.menu-contain .menu-category .menu-option h4 {
+    color: #656565;
+}
+
+/* menu-flex */
+
+.menu-flex{
+    display: inline-flex;
+}
+
+/* menu-main */
+
+.menu-main {
+    margin: 0px 4%;
+    display: flex;
+    flex: 1;
+}
+
+
+.menu-main .menu-section .menu-box {
+    height: 436px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.35);
+    margin: 20px 10px;
+}
+
+.menu-main .menu-section .menu-box a {
+    color: #000;
+}
+
+.menu-main .menu-section .menu-box:hover {
+    transform: scale(1.01);
+}
+
+.menu-main .menu-section .menu-box img {
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.menu-main .menu-section .menu-box .menu-min {
+    margin-left: 20px;
+    align-items: center;
+}
+
+.menu-main .menu-section .menu-box .menu-min .menu-min-icon {
+    margin-right: 3px;
+}
+
+.menu-main .menu-section .menu-box .menu-price {
+    margin-right: 20px;
+    color: #4b9e13;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menu-main .menu-section .menu-box .menu-text {
+    padding: 20px;
+}
+
+.menu-main .menu-section .menu-box .menu-text h2 {
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 10px;
+}
+
+.menu-main .menu-section .menu-box .menu-text p {
+    padding-top: 20px;
+}
+
+
+.menu-main .menu-section .menu-box .menu-text small {
+    color: #4b9e13;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-main .menu-section .menu-box .menu-min-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* PLan menu */
+.menu-plan-start {
+    text-align: center;
+    padding: 30px;
+    background-color: #e0f7d8;
+    margin-top: 20px;
+}
+
+.menu-plan-start p {
+    margin-top: 10px;
+    color: #656565;
+}
+
+/* Menu filter */
+.menu-filter{
+    border-right: 2px solid #ccc;
+}
+
+.menu-filter-block {
+    margin: 25px 20px;
+    
+}
+
+.menu-filter-block h1{
+    color: #4b9e13;
+}
+
+.menu-filter-container {
+    margin-top: 20px;
+}
+
+#min-form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#min-form input[type="radio"] {
+    display: none;
+}
+
+#min-form input[type="radio"]+span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#min-form input[type="radio"]:checked+span {
+    border-color: #4b9e13;
+    background-color: #81d34a;
+}
+
+#min-form input[type="radio"]:checked+span::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#min-form label span {
+    position: relative;
+}
+
+.header-i{
+    margin-right: 10px;
+}
+
+.form-i{
+    margin: 0px 10px;
+}
+
