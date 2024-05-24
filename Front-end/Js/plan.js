@@ -1,5 +1,6 @@
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
+let selectedDayElement = null;
 
 // Function to call generate calendar on load
 window.onload = function () {
@@ -19,7 +20,7 @@ function generateCalendar(month, year) {
 
     // Update the month-year display
     monthYearDisplay.textContent = `${monthNames[month]} ${year}`;
-    calendarTextDisplay.textContent = `${year}`
+    calendarTextDisplay.textContent = `${monthNames[month]}`
 
     // Create a new Date object for the first and last day of the month
     const firstDayOfMonth = new Date(year, month, 1);
@@ -46,6 +47,7 @@ function generateCalendar(month, year) {
         daySquare.className = "calendar-day";
         daySquare.textContent = day;
         daySquare.id = `day-${day}`;
+        daySquare.onclick = () => {openForm(day)};
         calendar.appendChild(daySquare);
     }
 
@@ -75,4 +77,33 @@ function changeMonth(delta) {
     generateCalendar(currentMonth, currentYear);
 }
 
+function openForm(day){
+    const form = document.getElementById('plannerForm')
+    const selectedDateDisplay = document.getElementById('selected-date');
+    const monthNames = ["January", "February", "March", "April", "May", "June", 
+      "July", "August", "September", "October", "November", "December"];
+
+    selectedDateDisplay.textContent = `${day} ${monthNames[currentMonth]} ${currentYear}`
+    form.style.display = 'block';
+    selectedDayElement = document.getElementById(`day-${day}`);
+}
+
+function closeForm(){
+    const form = document.getElementById('plannerForm');
+    form.style.display = 'none';
+}
+
+function savePlan(){
+    const input = document.getElementById('plan-input');
+    const plan = input.value;
+
+    if(plan){
+        const planDiv = document.createElement('div');
+        planDiv.className = 'plan';
+        planDiv.textContent = plan;
+        selectedDayElement.appendChild(planDiv);
+        input.value = "";
+        closeForm();
+    }
+}
 

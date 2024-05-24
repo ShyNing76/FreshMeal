@@ -1,8 +1,8 @@
-.main-contain{
+.main-contain {
     background-color: #fff;
 }
 
-.planner{
+.planner {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 60px;
@@ -12,20 +12,20 @@
     position: relative;
 }
 
-.planner .calendar-contain{
+.planner .calendar-contain {
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
 }
 
-.calendar-grid{
+.calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
     padding: 20px;
 }
 
-.calendar-day{
+.calendar-day {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,18 +39,20 @@
     cursor: pointer;
 }
 
-.calendar-day:hover{
+.calendar-day:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.prev-month, .next-month {
-    color: #ccc;
+.prev-month,
+.next-month {
+    color: #bbb;
 }
 
 .weekdays {
     display: flex;
     justify-content: space-between;
 }
+
 .weekday {
     width: 14.28%;
     text-align: center;
@@ -59,17 +61,17 @@
     padding: 20px 0;
 }
 
-.calendar-plan-text{
+.calendar-plan-text {
     color: #4b9e13;
 }
 
-#calendar-controls{
+#calendar-controls {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header-text{
+.header-text {
     background-color: #f4faf2;
     position: relative;
     top: 110px;
@@ -77,16 +79,16 @@
     text-align: center;
 }
 
-.header-text h1{
+.header-text h1 {
     color: #81d34a;
     font-size: 40px;
 }
 
-.header-text h4{
+.header-text h4 {
     color: #565656;
 }
 
-.calendar-nav{
+.calendar-nav {
     display: flex;
     align-items: end;
     margin-bottom: 10px;
@@ -94,12 +96,12 @@
     margin-top: 20px;
 }
 
-.calendar-logo img{
+.calendar-logo img {
     width: 20%;
 }
 
 
-.calendar-text{
+.calendar-text {
     padding: 5px 15px;
     border: 0.5px solid #ccc;
     cursor: default;
@@ -107,7 +109,7 @@
     font-weight: bold;
 }
 
-#calendar-controls i:nth-child(1){
+#calendar-controls i:nth-child(1) {
     padding: 7px 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -116,7 +118,7 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-#calendar-controls i:nth-child(3){
+#calendar-controls i:nth-child(3) {
     padding: 7px 10px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -125,9 +127,28 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Planner Form */
+
+.planner-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.planner-form input,
+.planner-form button {
+    display: block;
+    margin: 10px 0;
+}
 
 /* back-content */
-.back-content{
+.back-content {
     position: relative;
     top: 110px;
     padding-left: 8%;
@@ -135,23 +156,23 @@
     margin-bottom: 110px;
 }
 
-.back-content .back-content-header{
+.back-content .back-content-header {
     text-align: center;
     font-size: 25px;
     color: #565656;
 }
 
-.back-content .back-content-header h1{
+.back-content .back-content-header h1 {
     color: #81d34a;
 }
 
-.img-back-content{
+.img-back-content {
     position: relative;
-    width: 250px; 
+    width: 250px;
     height: 300px;
 }
 
-.img-back-content img{
+.img-back-content img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -166,7 +187,7 @@
     font-size: 20px;
 }
 
-.img-back-content .text-back-content h1{
+.img-back-content .text-back-content h1 {
     color: #95f356;
 }
 
@@ -176,12 +197,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.25); 
+    background-color: rgba(0, 0, 0, 0.25);
     pointer-events: none;
     border-radius: 10px;
 }
 
-.back-content .food-slider .box{
+.back-content .food-slider .box {
     width: 25rem;
     margin: 2rem 0;
     position: relative;
@@ -189,24 +210,26 @@
     cursor: grab;
 }
 
-.back-content .food-slider .box:active{
+.back-content .food-slider .box:active {
     cursor: grabbing;
 }
 
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next,
+.swiper-button-prev {
     border-radius: 50%;
-    border: 0.5px solid #4b9e13 ;
+    border: 0.5px solid #4b9e13;
     padding: 25px;
     color: #4b9e13;
     background-color: #f4faf2;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover{
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     background-color: #95f356;
 }
 
 .swiper-button-next::after,
-.swiper-button-prev::after{
+.swiper-button-prev::after {
     font-size: 1.5rem;
 }
