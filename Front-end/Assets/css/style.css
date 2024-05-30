@@ -23,6 +23,7 @@ a {
     color: #565656;
 }
 
+
 /* Animation */
 .hidden {
     opacity: 0;
@@ -70,11 +71,26 @@ a {
 
 /* Header navbar */
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+header, footer{
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+}
 
 nav {
     width: 100%;
-    padding: 4px 0;
+    padding: 4px 5%;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,14 +101,24 @@ nav {
     background: #fff;
 }
 
-nav ul li {
-    display: inline-block;
+
+nav ul {
     list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
+    display: flex;
 }
 
+nav ul li {
+    padding: 10px 30px;
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
+.btn-nav {
+    margin: 0;
+    padding: 5px;
+}
 
 .nav-menu:hover span::after {
     color: var(--main-color);
@@ -100,13 +126,8 @@ nav ul li {
 }
 
 
-nav ul {
-    margin-right: 50px;
-}
-
 .logo {
     width: 100px;
-    margin-left: 50px;
 }
 
 .nav-menu span {
@@ -123,6 +144,61 @@ nav ul {
     height: 2px;
     background-color: var(--main-color);
     transition: width .4s ease-out;
+}
+
+.img-user{
+    width: 30px;
+    height: 30px;
+}
+
+.img-user img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.icon-nav:hover {
+    color: #81d34a;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #81d34a;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    display: block;
+}
+
+.dropdown-menu ul li {
+    padding: 8px 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #565656;
+}
+
+.dropdown-menu ul li:hover {
+    background-color: #60b925;
+}
+
+.arrow-drop {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #81d34a;
+    position: absolute;
+    top: -8px;
+    left: 36px;
+    z-index: 1001;
 }
 
 /* Hero */
@@ -247,7 +323,7 @@ nav ul {
 
 .menu .menu-separate .menu-contain h4 {
     color: #4b9e13;
-    margin: 5px 0;  
+    margin: 5px 0;
     font-size: 18px;
 }
 
@@ -335,4 +411,3 @@ nav ul {
 .footer h5 {
     color: var(--main-color);
 }
-

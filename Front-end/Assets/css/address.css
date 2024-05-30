@@ -1,0 +1,161 @@
+.side-address{
+    background: #fff;
+    border-radius:  2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .13);
+    box-sizing: border-box;
+    margin-left: 10px;
+    min-width: 0;
+    position: relative;
+    width: 855px;
+}
+
+.address-main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+}
+
+.address-item-main{
+    overflow: visible;
+    flex-direction: column;
+    display: flex;
+}
+
+.address-header{
+    border-bottom: 1px solid #efefef;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 22px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.address-header-text{
+    flex: 1;
+}
+
+.address-header-text h1{
+    color: #81d34a;
+}
+
+.address-button-header{
+    margin-left: 10px;
+}
+
+.address-button-header i{
+    margin-right: 10px;
+}
+
+.address-content{
+    background: #f5f5f5;
+}
+
+.address-group{
+    background: #fff;
+    padding: 12px 30px 0;
+}
+
+.address-content-text{
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 8px;
+}
+
+.address-contain{
+    padding: 18px 0 20px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+    display: flex;
+}
+
+.address-main{
+    min-width: 0;
+    width: 100%;
+}
+
+.address-heading-section{
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-user-contain{
+    margin-right: 8px;
+    flex-grow: 1;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.name-address-section{
+    color: rgba(0, 0, 0, .87);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.name-address{
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Roboto", sans-serif;
+}
+
+.separate-line{
+    border-left: .5px solid rgba(0, 0, 0, .26);
+    margin: 0 8px;
+}
+
+.phone-address-user{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: rgba(0, 0, 0, .54);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.update-delete-address{
+    flex-basis: 40px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.update-address-btn, .delete-address-btn{
+    background: none;
+    border: 0;
+    color: #81d34a;
+    outline: none;
+    padding: 4px;
+    white-space: nowrap;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.address-heading-section{
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.address-user-contain{
+    margin-right: 8px;
+    flex-grow: 1;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.address-user{
+    font-size: 15px;
+    line-height: 1.25rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.address-text{
+    max-width: 70%;   
+}

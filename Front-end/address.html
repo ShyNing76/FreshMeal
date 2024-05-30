@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="Assets/Images/logo.png" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/address.css" />
+    <link rel="stylesheet" href="Assets/css/sidemenu.css" />
+
+    <!-- Fonts -->
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <title>Profile - FreshMeal</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <a href="index.html"
+            ><img class="logo" src="Assets/Images/logo.png" alt=""
+          /></a>
+          <ul>
+            <li>
+              <a class="nav-menu" href="plan.html"><span>Plans</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="how.html"><span>How it Works</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="menu.html"><span>Menu</span></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fa-solid fa-cart-shopping icon-nav"></i></a>
+            </li>
+            <li>
+              <div class="img-user">
+                <img src="Assets/Images/user/user1.jpg" alt="" />
+              </div>
+              <div class="dropdown-menu">
+                <ul>
+                  <div class="arrow-drop"></div>
+                  <a href="profile.html"><li>Profile</li></a>
+                  <li><a href="#">Order</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li class="btn-nav">
+                <a href="login.html" id="loginBtn" class="button">Login</a>
+              </li>
+              <li class="btn-nav">
+                <a href="signup.html" id="signupBtn" class="button dark-btn">Sign Up</a>
+              </li> -->
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="container-user">
+          <!-- side-user -->
+          <div class="side-menu">
+            <div class="side-img-user">
+              <a href="profile.html">
+                <img src="Assets/Images/user/user1.jpg" alt="User Image" />
+                <span>ShyNing76</span>
+              </a>
+            </div>
+            <div class="side-user">
+              <div class="profile-item-header">
+                <a href="profile.html">
+                  <i class="fa-regular fa-user"></i>
+                  <span>My Account</span>
+                </a>
+              </div>
+              <div class="profile-item">
+                <a href="profile.html">
+                  <span>Profile</span>
+                </a>
+                <a href="address.html">
+                  <span>Address</span>
+                </a>
+                <a href="passwordchange.html">
+                  <span>Change Password</span>
+                </a>
+              </div>
+            </div>
+            <div class="side-user">
+              <a href="#">
+                <i class="fa-regular fa-clipboard"></i>
+                <span>Order</span>
+              </a>
+            </div>
+            <div class="side-user">
+              <a href="#">
+                <i class="fa-regular fa-comment"></i>
+                <span>Comment</span>
+              </a>
+            </div>
+            <div class="side-user">
+              <a href="#">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notification</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile user -->
+          <div class="side-address">
+            <div class="address-main" role="main">
+              <div class="address-item-main">
+                <div class="address-header">
+                  <div class="address-header-text">
+                    <h1>My Address</h1>
+                  </div>
+                  <div class="address-button-header">
+                    <button class="button dark-btn">
+                      <i class="fa-solid fa-plus"></i> Add New Address
+                    </button>
+                  </div>
+                </div>
+
+                <div class="address-content">
+                  <div class="address-group">
+                    <!-- Address Item -->
+                    <div class="address-contain">
+                      <div class="address-main">
+                        <div role="heading" class="address-heading-section">
+                          <div class="address-user-contain">
+                            <span class="name-address-section">
+                              <div class="name-address">Đỗ Duy Long</div>
+                            </span>
+                            <div class="separate-line"></div>
+                            <div role="row" class="phone-address-user">
+                              0792694351
+                            </div>
+                          </div>
+                          <div class="update-delete-address">
+                            <button class="update-address-btn">Update</button>
+                            <button class="delete-address-btn">Delete</button>
+                          </div>
+                        </div>
+                        <div role="heading" class="address-heading-section">
+                          <div class="address-user-contain">
+                            <div class="address-user">
+                              <div role="row" class="address-text">
+                                Vinhomegranpark, S702, Nguyễn Xiển Phường Long
+                                Bình, Thành Phố Thủ Đức, TP. Hồ Chí Minh
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Repeat the Address Item for other addresses -->
+                    <div class="address-contain">
+                      <div class="address-main">
+                        <div role="heading" class="address-heading-section">
+                          <div class="address-user-contain">
+                            <span class="name-address-section">
+                              <div class="name-address">Đỗ Duy Long</div>
+                            </span>
+                            <div class="separate-line"></div>
+                            <div role="row" class="phone-address-user">
+                              0792694351
+                            </div>
+                          </div>
+                          <div class="update-delete-address">
+                            <button class="update-address-btn">Update</button>
+                            <button class="delete-address-btn">Delete</button>
+                          </div>
+                        </div>
+                        <div role="heading" class="address-heading-section">
+                          <div class="address-user-contain">
+                            <div class="address-user">
+                              <div role="row" class="address-text">
+                                Vinhomegranpark, S702, Nguyễn Xiển Phường Long
+                                Bình, Thành Phố Thủ Đức, TP. Hồ Chí Minh
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="address-contain">
+                      <div class="address-main">
+                        <div role="heading" class="address-heading-section">
+                          <div class="address-user-contain">
+                            <span class="name-address-section">
+                              <div class="name-address">Đỗ Duy Long</div>
+                            </span>
+                            <div class="separate-line"></div>
+                            <div role="row" class="phone-address-user">
+                              0792694351
+                            </div>
+                          </div>
+                          <div class="update-delete-address">
+                            <button class="update-address-btn">Update</button>
+                            <button class="delete-address-btn">Delete</button>
+                          </div>
+                        </div>
+                        <div role="heading" class="address-heading-section">
+                          <div class="address-user-contain">
+                            <div class="address-user">
+                              <div role="row" class="address-text">
+                                Vinhomegranpark, S702, Nguyễn Xiển Phường Long
+                                Bình, Thành Phố Thủ Đức, TP. Hồ Chí Minh
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Address Item -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="footer">
+        <div>
+          <p>Email : FreshMeal@contact.com</p>
+          <p>Address: FPTU Ho Chi Minh</p>
+
+          <h5>&copy; Copyright 2024. All Rights Reserved</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="Js/index.js"></script> -->
+  </body>
+</html>
