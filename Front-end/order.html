@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="Assets/Images/logo.png" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/order.css" />
+    <link rel="stylesheet" href="Assets/css/sidemenu.css" />
+
+    <!-- Fonts -->
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <title>Profile - FreshMeal</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <a href="index.html"
+            ><img class="logo" src="Assets/Images/logo.png" alt=""
+          /></a>
+          <ul>
+            <li>
+              <a class="nav-menu" href="plan.html"><span>Plans</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="how.html"><span>How it Works</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="menu.html"><span>Menu</span></a>
+            </li>
+
+            <li>
+              <a href="#"><i class="fa-solid fa-cart-shopping icon-nav"></i></a>
+            </li>
+            <li>
+              <div class="img-user">
+                <img src="Assets/Images/user/user1.jpg" alt="" />
+              </div>
+              <div class="dropdown-menu">
+                <ul>
+                  <div class="arrow-drop"></div>
+                  <a href="profile.html"><li>Profile</li></a>
+                  <a href="order.html"><li>Order</li></a>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li class="btn-nav">
+                <a href="login.html" id="loginBtn" class="button">Login</a>
+              </li>
+              <li class="btn-nav">
+                <a href="signup.html" id="signupBtn" class="button dark-btn">Sign Up</a>
+              </li> -->
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="container-user">
+          <!-- side-user -->
+          <div class="side-menu">
+            <div class="side-img-user">
+              <a href="profile.html">
+                <img src="Assets/Images/user/user1.jpg" alt="" />
+                <span>ShyNing76</span>
+              </a>
+            </div>
+            <div class="side-user">
+              <div class="profile-item-header">
+                <a href="profile.html">
+                  <i class="fa-regular fa-user"></i>
+                  <span>My Account</span>
+                </a>
+              </div>
+              <div class="profile-item">
+                <div>
+                  <a href="profile.html">
+                    <span>Profile</span>
+                  </a>
+                  <a href="address.html">
+                    <span>Address</span>
+                  </a>
+                  <a href="passwordchange.html">
+                    <span>Change Password</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="side-user">
+              <a href="order.html">
+                <i class="fa-regular fa-clipboard"></i>
+                <span>Order</span>
+              </a>
+            </div>
+            <div class="side-user">
+              <a href="#">
+                <i class="fa-regular fa-comment"></i>
+                <span>Comment</span>
+              </a>
+            </div>
+            <div class="side-user">
+              <a href="#">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notification</span>
+              </a>
+            </div>
+          </div>
+          <!-- order user -->
+          <div class="side-order">
+            <div style="display: contents">
+              <div class="order-contain">
+                <section class="progress-order" aria-role="tablist">
+                  <a class="progress-aria progress-choose" title="all" href="#"
+                    ><span class="progress-text">All</span></a
+                  ><a class="progress-aria" title="Delivery" href="#"
+                    ><span class="progress-text">Approve</span></a
+                  ><a class="progress-aria" title="Waiting" href="#"
+                    ><span class="progress-text">Delivery</span></a
+                  ><a class="progress-aria" title="Finish" href="#"
+                    ><span class="progress-text">Finish</span></a
+                  ><a class="progress-aria" title="Cancel" href="#"
+                    ><span class="progress-text">Cancel</span></a
+                  ><a class="progress-aria" title="Return/Refund" href="#"
+                    ><span class="progress-text">Return/Refund</span></a
+                  >
+                </section>
+                <section>
+                  <div class="search-order">
+                    <svg
+                      width="19px"
+                      height="19px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                      />
+                    </svg>
+                    <input
+                      aria-label=""
+                      role="search"
+                      placeholder="Search by name order"
+                      value=""
+                    />
+                  </div>
+                </section>
+                <main>
+                  <div>
+                    <div class="order-box">
+                      <div>
+                        <div class="order-main">
+                          <section>
+                            <div class="order-header">
+                              <div class="progress-order-header">
+                                <div class="progress-link-text">
+                                  <a href="#" class="progress-link">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke-width="1.5"
+                                      stroke="currentColor"
+                                      class="freshmeal-icon"
+                                    >
+                                      <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+                                      />
+                                    </svg>
+                                    Successful delivery
+                                  </a>
+                                </div>
+                                <div class="progress-header-text" tabindex="0">
+                                  Finish
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section>
+                            <a href="#">
+                              <div>
+                                <div class="order-detail-contain">
+                                  <div class="order-detail">
+                                    <div>
+                                      <section>
+                                        <div class="order-detail-content">
+                                          <div class="order-detail-text">
+                                            <img
+                                              src="Assets/Images/food/food1.jpg"
+                                              alt=""
+                                              class="order-img"
+                                            />
+                                            <div class="order-discription">
+                                              <div>
+                                                <div
+                                                  class="order-discription-text"
+                                                >
+                                                  <span class="discription-text"
+                                                    >Sườn xào chua ngọt</span
+                                                  >
+                                                </div>
+                                              </div>
+                                              <div>
+                                                <div class="order-type">
+                                                  Type:
+                                                  <div
+                                                    class="order-tags-contain"
+                                                  >
+                                                    <span class="order-tags">
+                                                      <i
+                                                        class="fa-solid fa-tag"
+                                                      ></i>
+                                                      <small>Hotpot</small>
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                                <div class="order-quantity">
+                                                  x1
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="order-detail-price">
+                                            <div class="order-price">
+                                              <span class="price">₫50.000</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                          </section>
+                        </div>
+                      </div>
+                      <div class="seperate-box">
+                        <div class="line line-left"></div>
+                        <div class="line line-right"></div>
+                      </div>
+                      <div class="order-final-price">
+                        <div class="order-price-contain">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="icon-dollar"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                            />
+                          </svg>
+                          <label class="order-price-text">Order Total: </label>
+                          <div class="final-price">₫50.000</div>
+                        </div>
+                      </div>
+                      <div class="order-option">
+                        <section class="option-section">
+                            <button class="button dark-btn">Rate</button>
+                            <div class="seperate-button"></div>
+                            <button class="button">Request For Refund/Return</button>
+                        </section>
+                      </div>
+                    </div>
+                    <div class="order-box">
+                        <div>
+                          <div class="order-main">
+                            <section>
+                              <div class="order-header">
+                                <div class="progress-order-header">
+                                  <div class="progress-link-text">
+                                    <a href="#" class="progress-link">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="freshmeal-icon"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+                                        />
+                                      </svg>
+                                      Successful delivery
+                                    </a>
+                                  </div>
+                                  <div class="progress-header-text" tabindex="0">
+                                    Finish
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                            <section>
+                              <a href="#">
+                                <div>
+                                  <div class="order-detail-contain">
+                                    <div class="order-detail">
+                                      <div>
+                                        <section>
+                                          <div class="order-detail-content">
+                                            <div class="order-detail-text">
+                                              <img
+                                                src="Assets/Images/food/food1.jpg"
+                                                alt=""
+                                                class="order-img"
+                                              />
+                                              <div class="order-discription">
+                                                <div>
+                                                  <div
+                                                    class="order-discription-text"
+                                                  >
+                                                    <span class="discription-text"
+                                                      >Sườn xào chua ngọt</span
+                                                    >
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div class="order-type">
+                                                    Type:
+                                                    <div
+                                                      class="order-tags-contain"
+                                                    >
+                                                      <span class="order-tags">
+                                                        <i
+                                                          class="fa-solid fa-tag"
+                                                        ></i>
+                                                        <small>Hotpot</small>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="order-quantity">
+                                                    x1
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="order-detail-price">
+                                              <div class="order-price">
+                                                <span class="price">₫50.000</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </a>
+                            </section>
+                          </div>
+                        </div>
+                        <div class="seperate-box">
+                          <div class="line line-left"></div>
+                          <div class="line line-right"></div>
+                        </div>
+                        <div class="order-final-price">
+                          <div class="order-price-contain">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="icon-dollar"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                            <label class="order-price-text">Order Total: </label>
+                            <div class="final-price">₫50.000</div>
+                          </div>
+                        </div>
+                        <div class="order-option">
+                          <section class="option-section">
+                              <button class="button dark-btn">Rate</button>
+                              <div class="seperate-button"></div>
+                              <button class="button">Request For Refund/Return</button>
+                          </section>
+                        </div>
+                      </div>
+
+                      <div class="order-box">
+                        <div>
+                          <div class="order-main">
+                            <section>
+                              <div class="order-header">
+                                <div class="progress-order-header">
+                                  <div class="progress-link-text">
+                                    <a href="#" class="progress-link">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="freshmeal-icon"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+                                        />
+                                      </svg>
+                                      Successful delivery
+                                    </a>
+                                  </div>
+                                  <div class="progress-header-text" tabindex="0">
+                                    Finish
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                            <section>
+                              <a href="#">
+                                <div>
+                                  <div class="order-detail-contain">
+                                    <div class="order-detail">
+                                      <div>
+                                        <section>
+                                          <div class="order-detail-content">
+                                            <div class="order-detail-text">
+                                              <img
+                                                src="Assets/Images/food/food1.jpg"
+                                                alt=""
+                                                class="order-img"
+                                              />
+                                              <div class="order-discription">
+                                                <div>
+                                                  <div
+                                                    class="order-discription-text"
+                                                  >
+                                                    <span class="discription-text"
+                                                      >Sườn xào chua ngọt</span
+                                                    >
+                                                  </div>
+                                                </div>
+                                                <div>
+                                                  <div class="order-type">
+                                                    Type:
+                                                    <div
+                                                      class="order-tags-contain"
+                                                    >
+                                                      <span class="order-tags">
+                                                        <i
+                                                          class="fa-solid fa-tag"
+                                                        ></i>
+                                                        <small>Hotpot</small>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                  <div class="order-quantity">
+                                                    x1
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="order-detail-price">
+                                              <div class="order-price">
+                                                <span class="price">₫50.000</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </a>
+                            </section>
+                          </div>
+                        </div>
+                        <div class="seperate-box">
+                          <div class="line line-left"></div>
+                          <div class="line line-right"></div>
+                        </div>
+                        <div class="order-final-price">
+                          <div class="order-price-contain">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="icon-dollar"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                            <label class="order-price-text">Order Total: </label>
+                            <div class="final-price">₫50.000</div>
+                          </div>
+                        </div>
+                        <div class="order-option">
+                          <section class="option-section">
+                              <button class="button dark-btn">Rate</button>
+                              <div class="seperate-button"></div>
+                              <button class="button">Request For Refund/Return</button>
+                          </section>
+                        </div>
+                      </div>
+                  </div>
+                </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="footer">
+        <div>
+          <p>Email : FreshMeal@contact.com</p>
+          <p>Address: FPTU Ho Chi Minh</p>
+
+          <h5>&copy; Copyright 2024. All Rights Reserved</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="Js/index.js"></script> -->
+  </body>
+</html>
