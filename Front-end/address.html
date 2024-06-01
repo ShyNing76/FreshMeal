@@ -137,7 +137,7 @@
                     <h1>My Address</h1>
                   </div>
                   <div class="address-button-header">
-                    <button class="button dark-btn">
+                    <button id="addNewAddressBtn" class="button dark-btn">
                       <i class="fa-solid fa-plus"></i> Add New Address
                     </button>
                   </div>
@@ -159,7 +159,7 @@
                             </div>
                           </div>
                           <div class="update-delete-address">
-                            <button class="update-address-btn">Update</button>
+                            <button id="update-button" class="update-address-btn">Update</button>
                             <button class="delete-address-btn">Delete</button>
                           </div>
                         </div>
@@ -190,7 +190,7 @@
                             </div>
                           </div>
                           <div class="update-delete-address">
-                            <button class="update-address-btn">Update</button>
+                            <button id="update-button" class="update-address-btn">Update</button>
                             <button class="delete-address-btn">Delete</button>
                           </div>
                         </div>
@@ -220,7 +220,7 @@
                             </div>
                           </div>
                           <div class="update-delete-address">
-                            <button class="update-address-btn">Update</button>
+                            <button id="update-button" class="update-address-btn">Update</button>
                             <button class="delete-address-btn">Delete</button>
                           </div>
                         </div>
@@ -245,6 +245,123 @@
         </div>
       </main>
 
+      <aside id="addressForm" class="form-container" role="dialog" tabindex="0" >
+        <div class="form-address">
+          <div class="form-address-item">
+            <div class="form-address-text">New Address</div>
+            <form action="">
+              <div class="inside-form">
+                <div class="form-main-content">
+                  <div class="form-main-item">
+                    <div class="form-main name-item">
+                      <div class="form-main-contain">
+                        <input
+                          class="form-input"
+                          type="text"
+                          placeholder="Name"
+                          maxlength="64"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="seperate-box"></div>
+                    <div class="form-main phone-item">
+                      <div class="form-main-contain">
+                        <input
+                          class="form-input"
+                          type="text"
+                          placeholder="Phone"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-main-item">
+                    <div class="form-main-address">
+                      <div class="address-form-contain">
+                        <div class="form-main-contain address-area-large">
+                          <textarea
+                            class="address-main-area"
+                            rows="4"
+                            placeholder="Address"
+                            maxlength="256"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-button">
+                  <button id="returnBtn" class="button">Return</button>
+                  <div class="seperate-box"></div>
+                  <button id="finishBtn" class="button dark-btn">Finish</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="background-form"></div>
+      </aside>
+
+      <!-- Form update -->
+      <aside id="updateAddressForm" class="form-container" role="dialog" tabindex="0" >
+        <div class="form-address">
+          <div class="form-address-item">
+            <div class="form-address-text">Update Address</div>
+            <form action="">
+              <div class="inside-form">
+                <div class="form-main-content">
+                  <div class="form-main-item">
+                    <div class="form-main name-item">
+                      <div class="form-main-contain">
+                        <input
+                          class="form-input"
+                          type="text"
+                          placeholder="Name"
+                          maxlength="64"
+                          value="Đỗ Duy Long"
+                        />
+                      </div>
+                    </div>
+                    <div class="seperate-box"></div>
+                    <div class="form-main phone-item">
+                      <div class="form-main-contain">
+                        <input
+                          class="form-input"
+                          type="text"
+                          placeholder="Phone"
+                          value="0792694351"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-main-item">
+                    <div class="form-main-address">
+                      <div class="address-form-contain">
+                        <div class="form-main-contain address-area-large">
+                          <textarea
+                            class="address-main-area"
+                            rows="4"
+                            placeholder="Address"
+                            maxlength="256"
+                            >Vinhomegranpark, S702, Nguyễn Xiển Phường Long Bình, Thành Phố Thủ Đức, TP. Hồ Chí Minh</textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-button">
+                  <button id="returnBtn" class="button">Return</button>
+                  <div class="seperate-box"></div>
+                  <button id="finishBtn" class="button dark-btn">Finish</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="background-form"></div>
+      </aside>
+
       <div class="footer">
         <div>
           <p>Email : FreshMeal@contact.com</p>
@@ -256,5 +373,6 @@
     </div>
 
     <!-- <script src="Js/index.js"></script> -->
+    <script src="Js/address.js"></script>
   </body>
 </html>
