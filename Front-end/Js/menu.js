@@ -21,12 +21,16 @@ function updateWeekLinks() {
       const startDate = new Date(today);
       startDate.setDate(today.getDate() + (index * 7));
       const weekRange = getWeekRange(startDate);
+      const monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 
       const [start, end] = weekRange.split(' - ');
       const [startDay, startMonth] = start.split('-');
       const [endDay, endMonth] = end.split('-');
 
-      link.querySelector('small').textContent = `Tháng ${startMonth}`;
+      const indexMonth = parseInt(startMonth) - 1;
+      
+      link.querySelector('small').textContent = monthName[indexMonth];
       link.querySelector('span').textContent = `${startDay}-${endDay}`;
     });
   }
