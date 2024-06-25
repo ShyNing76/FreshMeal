@@ -1,35 +1,10 @@
-const addressForm = document.getElementById('addressForm');
-const updateAddress = document.getElementById('updateAddressForm');
-
-
-document.getElementById('addNewAddressBtn').addEventListener("click", () => {
-    addressForm.style.display = 'flex';
-});
-
-document.querySelectorAll('.update-button').forEach(button => {
-    button.addEventListener('click', () => {
-        updateAddress.style.display = 'flex';
-    })
-})
-
-document.getElementById('returnBtn').addEventListener('click', () => {
-    addressForm.style.display = 'none';
-    updateAddress.style.display = 'none';
-});
-
-document.getElementById('finishBtn').addEventListener('click', () => {
-    addressForm.style.display = 'none';
-    updateAddress.style.display = 'none';
-});
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    const addressContainers = document.querySelectorAll(".address-contain");
+    const methodContainers = document.querySelectorAll(".method-item");
 
-    addressContainers.forEach(container => {
+    methodContainers.forEach(container => {
         container.addEventListener("click", function() {
             // Remove checked class from all radio buttons
-            addressContainers.forEach(item => {
+            methodContainers.forEach(item => {
                 const radioButton = item.querySelector(".stardust-radio");
                 radioButton.classList.remove("radio-checked");
                 radioButton.querySelector(".stardust-radio-button").classList.remove("radio-button-checked");

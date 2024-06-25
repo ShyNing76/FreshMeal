@@ -14,6 +14,12 @@
     />
     <link rel="stylesheet" href="Assets/css/plan.css" />
 
+    <!-- SweetAlert2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css"
+    />
+
     <!-- Fonts -->
     <!-- Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,196 +45,1053 @@
     <title>Plan - Fresh Meal</title>
   </head>
   <body>
-    <div>
-      <nav>
-        <a href="index.html"
-          ><img class="logo" src="Assets/Images/logo.png" alt=""
-        /></a>
-        <ul>
-          <li>
-            <a class="nav-menu" href="plan.html"><span>Plans</span></a>
-          </li>
-          <li>
-            <a class="nav-menu" href="how.html"><span>How it Works</span></a>
-          </li>
-          <li>
-            <a class="nav-menu" href="menu.html"><span>Menu</span></a>
-          </li>
-          <li>
-            <a href="login.html" id="loginBtn" class="button">Login</a>
-          </li>
-          <li>
-            <a href="signup.html" id="signupBtn" class="button dark-btn"
-              >Sign Up</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <section class="hidden">
-      <div class="header-text">
-        <h1>Personalize your Plan</h1>
-        <h4>Choose From 100+ weekly menu options</h4>
-      </div>
-    </section>
-
-    <section class="hidden">
-      <div class="planner">
-        <div class="calendar-nav">
-          <h2 id="month-year"></h2>
-          <div id="calendar-controls">
-            <i onclick="changeMonth(-1)" class="fa-solid fa-backward"> </i>
-            <div class="calendar-text" id="calendar-text"></div>
-            <i onclick="changeMonth(1)" class="fa-solid fa-forward"> </i>
-          </div>
-          <div class="calendar-plan-text">
-            <h4>Personal Plans</h4>
-          </div>
-        </div>
-
-        <div class="calendar-contain">
-          <div class="weekdays">
-            <div class="weekday">Sun</div>
-            <div class="weekday">Mon</div>
-            <div class="weekday">Tue</div>
-            <div class="weekday">Wed</div>
-            <div class="weekday">Thu</div>
-            <div class="weekday">Fri</div>
-            <div class="weekday">Sat</div>
-          </div>
-
-          <div id="calendar" class="calendar-grid"></div>
-        </div>
-      </div>
-
-      <div id="plannerForm" class="planner-form">
-        <h3>Plan for <span id="selected-date"></span></h3>
-        <input type="text" id="plan-input" placeholder="Enter your plan" />
-        <button onclick="savePlan()">Save</button>
-        <button onclick="closeForm()">Cancel</button>
-      </div>
-    </section>
-
-    <section class="hidden">
-      <div class="back-content">
-        <div class="back-content-header">
-          <h1>Enjoy 100+ options each week</h1>
-          <p>for breakfast, lunch, dinner and more.</p>
-        </div>
-
-        <div class="swiper food-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food11.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Rice</h1>
-                  <p>our most popular plan</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food8.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Noodle</h1>
-                  <p>delight in every slurp</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food13.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Vietnamese Cake</h1>
-                  <p>sweet traditions in every bite</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food9.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Rolls</h1>
-                  <p>wrapped in freshness</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food14.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Veggie</h1>
-                  <p>green and glorious goodness</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food15.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Foreign Food</h1>
-                  <p>flavors from around the world</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food3.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Hotpot</h1>
-                  <p>a communal culinary adventure</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide box">
-              <div class="img-back-content">
-                <img src="Assets/Images/food/food16.jpg" alt="" />
-                <div class="overlay"></div>
-                <div class="text-back-content">
-                  <h1>Deserts</h1>
-                  <p>sweet endings to savor</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer">
+    <div class="wrapper">
       <div>
-        <p>Email : FreshMeal@contact.com</p>
-        <p>Address: FPTU Ho Chi Minh</p>
+        <nav>
+          <a href="index.html"
+            ><img class="logo" src="Assets/Images/logo.png" alt=""
+          /></a>
+          <ul>
+            <li>
+              <a class="nav-menu" href="plan.html"><span>Plans</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="how.html"><span>How it Works</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="menu.html"><span>Menu</span></a>
+            </li>
+            <li>
+              <a href="login.html" id="loginBtn" class="button">Login</a>
+            </li>
+            <li>
+              <a href="signup.html" id="signupBtn" class="button dark-btn"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <h5>&copy; Copyright 2024. All Rights Reserved</h5>
+      <section class="hidden">
+        <div class="header-text">
+          <h1>Personalize your Plan</h1>
+          <h4>Choose From 100+ weekly menu options</h4>
+        </div>
+      </section>
+
+      <section class="hidden">
+        <div id="planner-calendar" class="planner">
+          <div class="calendar-nav">
+            <h2 id="month-year"></h2>
+            <div id="calendar-controls">
+              <i onclick="changeMonth(-1)" class="fa-solid fa-backward"> </i>
+              <div class="calendar-text" id="calendar-text"></div>
+              <i onclick="changeMonth(1)" class="fa-solid fa-forward"> </i>
+            </div>
+            <div class="calendar-plan-text">
+              <h4>Personal Plans</h4>
+            </div>
+          </div>
+
+          <div class="calendar-contain">
+            <div class="weekdays">
+              <div class="weekday">Sun</div>
+              <div class="weekday">Mon</div>
+              <div class="weekday">Tue</div>
+              <div class="weekday">Wed</div>
+              <div class="weekday">Thu</div>
+              <div class="weekday">Fri</div>
+              <div class="weekday">Sat</div>
+            </div>
+
+            <div id="calendar" class="calendar-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hidden box -->
+      <div id="planner-container" class="planner-container">
+        <div class="planner-choose">
+          <div class="planner-header">
+            <div class="logo-planner-header">
+              <img src="Assets/Images/logo.png" alt="" />
+            </div>
+            <div class="daypick-header">
+              <h1 id="selected-date"></h1>
+            </div>
+            <div class="control-section">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="setting-svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              <svg
+                onclick="closeDay()"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="exit-svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="planner-main-content">
+            <div class="main-contain">
+              <div class="planner-choose-box">
+                <div class="description-image">
+                  <img
+                    src="Assets/Images/food-plan/Default_Morning_food_1.jpg"
+                    alt=""
+                  />
+                  <h3>Breakfast</h3>
+                </div>
+                <div class="plan-menu-contain">
+                  <div class="plan-choose-box">
+                    <div class="plan-control">
+                      <a target="_blank" href="menu-info.html">
+                        <div class="plan-box-container">
+                          <div class="img-food-plan">
+                            <img src="Assets\Images\food\food2.jpg" alt="" />
+                          </div>
+                          <div class="content-food-plan">
+                            <div class="discription-items">
+                              <h2>Sườn Xào Chua Ngọt</h2>
+                              <div class="plan-time-cost">
+                                <i class="fa-solid fa-box"></i>
+                                <small>MealKit</small>
+                              </div>
+                            </div>
+                            <div class="discription-items">
+                              <div class="menu-tags-contain">
+                                <span class="plan-tags">
+                                  <i class="fa-solid fa-tag"></i>
+                                  <small>Rice</small>
+                                </span>
+                              </div>
+                              <div class="plan-time-cost">
+                                <small>Qty: 2</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="plan-main-control">
+                        <!-- hidden-box -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="update-plan"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+                          />
+                        </svg>
+                        <a class="delete-plan">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="plan-control">
+                      <a target="_blank" href="menu-info.html">
+                        <div class="plan-box-container">
+                          <div class="img-food-plan">
+                            <img src="Assets/Images/food/food1.jpg" alt="" />
+                          </div>
+                          <div class="content-food-plan">
+                            <div class="discription-items">
+                              <h2>Sườn Xào Chua Ngọt</h2>
+                              <div class="plan-time-cost">
+                                <i class="fa-solid fa-box"></i>
+                                <small>MealKit</small>
+                              </div>
+                            </div>
+                            <div class="discription-items">
+                              <div class="menu-tags-contain">
+                                <span class="plan-tags">
+                                  <i class="fa-solid fa-tag"></i>
+                                  <small>Rice</small>
+                                </span>
+                              </div>
+                              <div class="plan-time-cost">
+                                <small>Qty: 2</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="plan-main-control hidden-box">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="update-plan"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+                          />
+                        </svg>
+                        <form class="delete-plan" action="">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                            />
+                          </svg>
+                        </form>
+                      </div>
+                    </div>
+                    <!-- Khi chua co plan gi thi hien hoac chua du 2 plan-->
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="add-svg" data-meal="Breakfast">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>                   -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="planner-choose-box">
+                <div class="description-image">
+                  <img
+                    src="Assets/Images/food-plan/Default_lunch_food_0.jpg"
+                    alt=""
+                  />
+                  <h3>Lunch</h3>
+                </div>
+                <div class="plan-menu-contain">
+                  <div class="plan-choose-box">
+                    <div class="plan-control">
+                      <a target="_blank" href="menu-info.html">
+                        <div class="plan-box-container">
+                          <div class="img-food-plan">
+                            <img src="Assets/Images/food/food1.jpg" alt="" />
+                          </div>
+                          <div class="content-food-plan">
+                            <div class="discription-items">
+                              <h2>Sườn Xào Chua Ngọt</h2>
+                              <div class="plan-time-cost">
+                                <i class="fa-solid fa-box"></i>
+                                <small>MealKit</small>
+                              </div>
+                            </div>
+                            <div class="discription-items">
+                              <div class="menu-tags-contain">
+                                <span class="plan-tags">
+                                  <i class="fa-solid fa-tag"></i>
+                                  <small>Rice</small>
+                                </span>
+                              </div>
+                              <div class="plan-time-cost">
+                                <small>Qty: 2</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="plan-main-control hidden-box">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="update-plan"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+                          />
+                        </svg>
+                        <a class="delete-plan">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="add-svg"
+                      data-meal="Lunch"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="planner-choose-box">
+                <div class="description-image">
+                  <img
+                    src="Assets/Images/food-plan/Default_brunch_0.jpg"
+                    alt=""
+                  />
+                  <h3>Brunch</h3>
+                </div>
+                <div class="plan-menu-contain">
+                  <div class="plan-choose-box">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="add-svg"
+                      data-meal="Brunch"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="planner-choose-box">
+                <div class="description-image">
+                  <img
+                    src="Assets/Images/food-plan/Default_dinner_1.jpg"
+                    alt=""
+                  />
+                  <h3>Dinner</h3>
+                </div>
+                <div class="plan-menu-contain">
+                  <div class="plan-choose-box">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="add-svg"
+                      data-meal="Dinner"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside id="planForm" class="form-container" role="dialog" tabindex="0">
+        <div class="form-plan">
+          <div class="form-plan-item">
+            <div class="form-plan-text">
+              Add Personal Plan -
+              <span id="plan-type-text" style="margin-left: 5px; color: #4b9e13"
+                >Breakfast</span
+              >
+            </div>
+            <form action="" id="form-create">
+              <div class="inside-form">
+                <div class="form-main-content">
+                  <div class="swiper food-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide plan-box">
+                        <input
+                          type="radio"
+                          id="product-1"
+                          class="hidden-radio"
+                          name="selectedProduct"
+                        />
+                        <label for="product-1">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+
+                          <div class="overlay-plan">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                          </div>
+                        </label>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <input
+                          type="radio"
+                          id="product-2"
+                          class="hidden-radio"
+                          name="selectedProduct"
+                        />
+                        <label for="product-2">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+
+                          <div class="overlay-plan">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                          </div>
+                        </label>
+                      </div>
+
+                      <!-- <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide plan-box">
+                        <a href="menu-info.html">
+                          <img src="Assets/Images/food/food1.jpg" alt="" />
+                          <div class="plan-text">
+                            <div class="menu-tags-contain">
+                              <span class="plan-tags">
+                                <i class="fa-solid fa-tag"></i>
+                                <small>Rice</small>
+                              </span>
+                            </div>
+                            <h2>Sườn Chua Ngọt</h2>
+                            <p>
+                              Food provide essensial nutriels for overall health
+                              and well-being
+                            </p>
+                          </div>
+                          <div class="plan-min-price">
+                            <div class="plan-min">
+                              <i class="fa-regular fa-clock plan-min-icon"></i>
+                              <small> 25 Min</small>
+                            </div>
+                            <small class="plan-price">50.000 VND</small>
+                          </div>
+                        </a>
+                      </div> -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+
+                  <div class="menu-info-selection">
+                    <h3>Type</h3>
+                    <div class="button-selection">
+                      <button id="meal-kit" class="enable-selection">
+                        Meal Kits
+                      </button>
+                      <button id="prepare-meal">Prepared Meals</button>
+                    </div>
+                  </div>
+
+                  <div class="menu-info-quantity">
+                    <h3>Quantity</h3>
+                    <button id="decrement" class="button-quantity">
+                      <svg
+                        enable-background="new 0 0 10 10"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        y="0"
+                        class="svg-icon"
+                      >
+                        <polygon
+                          points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"
+                        ></polygon>
+                      </svg>
+                    </button>
+                    <input
+                      type="text"
+                      role="spinbutton"
+                      value="1"
+                      class="button-quantity input-quantity"
+                    />
+                    <button id="increment" class="button-quantity">
+                      <svg
+                        enable-background="new 0 0 10 10"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        y="0"
+                        class="svg-icon icon-plus-sign"
+                      >
+                        <polygon
+                          points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"
+                        ></polygon>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-button">
+                  <button id="returnBtn" class="button">Return</button>
+                  <div class="seperate-box"></div>
+                  <button id="finishBtn" class="button dark-btn saveBtn">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="background-form"></div>
+      </aside>
+
+      <aside
+        id="updateplanForm"
+        class="update-container"
+        role="dialog"
+        tabindex="0"
+      >
+        <div class="form-plan">
+          <div class="form-plan-update-item">
+            <div class="form-plan-text">
+              Update Personal Plan -
+              <span
+                id="plan-type-text"
+                style="margin-left: 5px; color: #4b9e13"
+              ></span>
+            </div>
+            <form action="">
+              <div class="inside-update-form">
+                <div class="form-main-content">
+                  <div class="plan-control">
+                    <div class="plan-update-box-container">
+                      <div class="img-food-plan">
+                        <img src="Assets\Images\food\food2.jpg" alt="" />
+                      </div>
+                      <div class="content-food-plan">
+                        <div class="discription-items">
+                          <h2>Sườn Xào Chua Ngọt</h2>
+                          <div class="plan-time-cost">
+                            <i class="fa-solid fa-box"></i>
+                            <small>MealKit</small>
+                          </div>
+                        </div>
+                        <div class="discription-items">
+                          <div class="menu-tags-contain">
+                            <span class="plan-tags">
+                              <i class="fa-solid fa-tag"></i>
+                              <small>Rice</small>
+                            </span>
+                          </div>
+                          <div class="plan-time-cost">
+                            <small>Qty: 2</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="menu-info-selection">
+                    <h3>Type</h3>
+                    <div class="button-selection">
+                      <button id="meal-kit" class="enable-selection">
+                        Meal Kits
+                      </button>
+                      <button id="prepare-meal">Prepared Meals</button>
+                    </div>
+                  </div>
+
+                  <div class="menu-info-quantity">
+                    <h3>Quantity</h3>
+                    <button id="decrement" class="button-quantity">
+                      <svg
+                        enable-background="new 0 0 10 10"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        y="0"
+                        class="svg-icon"
+                      >
+                        <polygon
+                          points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5"
+                        ></polygon>
+                      </svg>
+                    </button>
+                    <input
+                      type="text"
+                      role="spinbutton"
+                      value="1"
+                      class="button-quantity input-quantity"
+                    />
+                    <button id="increment" class="button-quantity">
+                      <svg
+                        enable-background="new 0 0 10 10"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        y="0"
+                        class="svg-icon icon-plus-sign"
+                      >
+                        <polygon
+                          points="10 4.5 5.5 4.5 5.5 0 4.5 0 4.5 4.5 0 4.5 0 5.5 4.5 5.5 4.5 10 5.5 10 5.5 5.5 10 5.5"
+                        ></polygon>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-button">
+                  <button id="returnUpdateBtn" class="button">Return</button>
+                  <div class="seperate-box"></div>
+                  <button id="finishUpdateBtn" class="button dark-btn">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="background-form"></div>
+      </aside>
+
+      <section class="hidden">
+        <div class="back-content">
+          <div class="back-content-header">
+            <h1>Enjoy 100+ options each week</h1>
+            <p>for breakfast, lunch, dinner and more.</p>
+          </div>
+
+          <div class="swiper food-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food11.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Rice</h1>
+                    <p>our most popular plan</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food8.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Noodle</h1>
+                    <p>delight in every slurp</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food13.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Vietnamese Cake</h1>
+                    <p>sweet traditions in every bite</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food9.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Rolls</h1>
+                    <p>wrapped in freshness</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food14.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Veggie</h1>
+                    <p>green and glorious goodness</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food15.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Foreign Food</h1>
+                    <p>flavors from around the world</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food3.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Hotpot</h1>
+                    <p>a communal culinary adventure</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="img-back-content">
+                  <img src="Assets/Images/food/food16.jpg" alt="" />
+                  <div class="overlay"></div>
+                  <div class="text-back-content">
+                    <h1>Deserts</h1>
+                    <p>sweet endings to savor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <div>
+          <p>Email : FreshMeal@contact.com</p>
+          <p>Address: FPTU Ho Chi Minh</p>
+
+          <h5>&copy; Copyright 2024. All Rights Reserved</h5>
+        </div>
       </div>
     </div>
+
+    <!-- Sweatalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.all.min.js"></script>
 
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- Main -->
     <script src="Js/swiper-api.js"></script>
+    <script src="Js/memu-info.js"></script>
     <script src="Js/index.js"></script>
     <script src="Js/plan.js"></script>
-
   </body>
 </html>

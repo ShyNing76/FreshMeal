@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="Assets/Images/logo.png" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/card.css">
+
+    <!-- Fonts -->
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <title>Fresh Meal</title>
+
+</head>
+<body>
+    <div>
+        <nav>
+          <a href="index.html"
+            ><img class="logo" src="Assets/Images/logo.png" alt=""
+          /></a>
+          <ul>
+            <li>
+              <a class="nav-menu" href="plan.html"><span>Plans</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="how.html"><span>How it Works</span></a>
+            </li>
+            <li>
+              <a class="nav-menu" href="menu.html"><span>Menu</span></a>
+            </li>
+  
+            <li>
+              <a href="#"><i class="fa-solid fa-basket-shopping icon-nav"></i></a>
+            </li>
+            <li>
+              <div class="img-user">
+                <img src="Assets/Images/user/user1.jpg" alt="">
+              </div>
+              <div class="dropdown-menu">
+                <ul>
+                  <div class="arrow-drop"></div>
+                  <a href="profile.html"><li>Profile</li></a>
+                  <a href="order.html"><li>Order</li></a>
+                  <a href="#"><li>Logout</li></a>
+  
+                </ul>
+              </div>
+            </li>
+  
+            <!-- <li class="btn-nav">
+              <a href="login.html" id="loginBtn" class="button">Login</a>
+            </li>
+            <li class="btn-nav">
+              <a href="signup.html" id="signupBtn" class="button dark-btn">Sign Up</a>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+
+      <main>
+        <div class="cart-container">
+          <div class="cart">
+            <div class="cart-items">
+              <div class="cart-items-title">
+                <p>Items</p>
+                <p>Title</p>
+                <p>Type</p>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p>Remove</p>
+              </div>
+              <br>
+              <hr>
+
+              <div class="cart-box">
+                <div class="cart-items-title cart-items-item">
+                  <img src="Assets/Images/food/food1.jpg" alt="">
+                  <p class="cart-title">Sườn Xào Chua Ngọt</p>
+                  <p>Meal kit</p>
+                  <p>50.000đ</p>
+                  <p class="quantity-cart">1</p>
+                  <button type="submit" class="remove-btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <hr>
+              </div>
+
+              <div class="cart-box">
+                <div class="cart-items-title cart-items-item">
+                  <img src="Assets/Images/food/food1.jpg" alt="">
+                  <p class="cart-title">Sườn Xào Chua Ngọt</p>
+                  <p>Meal kit</p>
+                  <p>50.000đ</p>
+                  <p class="quantity-cart">1</p>
+                  <button type="submit" class="remove-btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <hr>
+              </div>
+
+              <div class="cart-box">
+                <div class="cart-items-title cart-items-item">
+                  <img src="Assets/Images/food/food1.jpg" alt="">
+                  <p class="cart-title">Sườn Xào Chua Ngọt</p>
+                  <p>Meal kit</p>
+                  <p>50.000đ</p>
+                  <p class="quantity-cart">1</p>
+                  <button type="submit" class="remove-btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <hr>
+              </div>
+
+              
+
+              <div class="cart-bottom">
+                <div class="cart-total">
+                  <h2>Cart Totals</h2>
+                  <div>
+                    <div class="cart-total-details">
+                      <p>Subtotal</p>
+                      <p>150.000đ</p>
+                    </div>
+                    <hr>
+                    <div class="cart-total-details">
+                      <p>Discount (-10%)</p>
+                      <p>-20.000đ</p>
+                    </div>
+                    <hr>
+                    <div class="cart-total-details">
+                      <p>Tax</p>
+                      <p>10.000đ</p>
+                    </div>
+                    <hr>
+                    <div class="cart-total-details">
+                      <b>Total:</b>
+                      <b>140.000đ</b>
+                    </div>
+                  </div>
+                  <a href="checkout.html">PROCEED TO CHECKOUT</a>
+                </div>
+                <div class="cart-promocode">
+                  <div>
+                    <p>If you have a promo code, Enter it here</p>
+                    <div class="cart-promocode-input">
+                      <input type="text" placeholder="Promo code">
+                      <button type="submit">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+
+</body>
+</html>

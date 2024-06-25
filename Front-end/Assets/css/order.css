@@ -105,24 +105,6 @@
     padding: 0 0 0 10px;
 }
 
-.progress-link-text{
-    align-items: center;
-    border-right: 1px solid rgba(0, 0, 0, .12);
-    display: flex;
-    margin: 0 10px 0 0;
-    padding: 0 5px 0 0;
-    text-align: right;
-}
-
-.progress-link{
-    align-items: center;
-    display: inline-flex;
-    margin: 0;
-    vertical-align: middle;
-    color: #4b9e13;
-    text-align: center;
-}
-
 .freshmeal-icon{
     margin: 0 4px 1px 0;
     display: inline-block;
@@ -136,6 +118,8 @@
     text-align: right;
     text-transform: uppercase;
     white-space: nowrap;
+    color: #81d34a;
+    font-weight: bold;
 }
 
 .order-detail-contain:first-child{
@@ -170,8 +154,8 @@
     background: #e1e1e1;
     border: 1px solid #e1e1e1;
     flex-shrink: 0;
-    height: 80px;
-    width: 100px;
+    height: 60px;
+    width: 90px;
 }
 
 .order-discription{
@@ -231,6 +215,11 @@
 
 .order-quantity{
     margin: 0 0 5px;
+    color: rgba(0, 0, 0, .54);
+}
+
+.order-quantity b{
+    color: #3b800d;
 }
 
 .order-detail-price{

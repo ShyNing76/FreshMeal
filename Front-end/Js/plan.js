@@ -1,5 +1,8 @@
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
+let currentDay = new Date().getDate();
+let changeCurrentMonth = new Date().getMonth();
+let changeCurrentYear = new Date().getFullYear();
 let selectedDayElement = null;
 
 // Function to call generate calendar on load
@@ -45,9 +48,22 @@ function generateCalendar(month, year) {
     for (let day = 1; day <= totalDays; day++) {
         let daySquare = document.createElement("div");
         daySquare.className = "calendar-day";
-        daySquare.textContent = day;
         daySquare.id = `day-${day}`;
-        daySquare.onclick = () => {openForm(day)};
+        daySquare.onclick = () => { openDay(day) };
+    
+        // Create a div for the day text
+        let dayText = document.createElement("div");
+        dayText.className = "day-text";
+        dayText.textContent = day;
+        
+        // Append the day text div to the day square
+        daySquare.appendChild(dayText);
+    
+        // Highlight the current date
+        if (day === currentDay && month === currentMonth && year === currentYear) {
+            dayText.classList.add('current-date');
+        }
+    
         calendar.appendChild(daySquare);
     }
 
@@ -66,44 +82,161 @@ function generateCalendar(month, year) {
 
 // Function to change the month
 function changeMonth(delta) {
-    currentMonth += delta;
-    if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
-    } else if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
+    changeCurrentMonth += delta;
+    if (changeCurrentMonth > 11) {
+        changeCurrentMonth = 0;
+        changeCurrentYear++;
+    } else if (changeCurrentMonth < 0) {
+        changeCurrentMonth = 11;
+        changeCurrentYear--;
     }
-    generateCalendar(currentMonth, currentYear);
+    generateCalendar(changeCurrentMonth, changeCurrentYear);
 }
 
-function openForm(day){
-    const form = document.getElementById('plannerForm')
-    const selectedDateDisplay = document.getElementById('selected-date');
-    const monthNames = ["January", "February", "March", "April", "May", "June", 
-      "July", "August", "September", "October", "November", "December"];
+// Function to open the planner form for the selected day
+function openDay(day) {
+    const plannerContainer = document.getElementById('planner-container');
+    const selectedDateElement = document.getElementById('selected-date');
+    const plannerCalendar = document.getElementById('planner-calendar');
+    const selectedDate = new Date(currentYear, currentMonth, day);
 
-    selectedDateDisplay.textContent = `${day} ${monthNames[currentMonth]} ${currentYear}`
-    form.style.display = 'block';
-    selectedDayElement = document.getElementById(`day-${day}`);
+    // Format the selected date
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    selectedDateElement.textContent = selectedDate.toLocaleDateString('en-US', options);
+
+    // Show the planner container
+    plannerContainer.classList.remove('hidden-box');
+    plannerCalendar.classList.add('hidden-box');
 }
 
-function closeForm(){
-    const form = document.getElementById('plannerForm');
-    form.style.display = 'none';
+
+
+
+function closeDay(){
+    const plannerContainer = document.getElementById('planner-container');
+    const plannerCalendar = document.getElementById('planner-calendar');
+    
+    // Show the planner container
+    plannerContainer.classList.add('hidden-box');
+    plannerCalendar.classList.remove('hidden-box');
 }
 
-function savePlan(){
-    const input = document.getElementById('plan-input');
-    const plan = input.value;
+// Auto complete search box 
+// let availableKeywords = [
+//     'Sườn Xào Chua Ngọt',
+//     'Bò Xào Hành Tây',
+//     'Tôm Hùm Nướng',
+//     'Phở',
+//     'Bún Xào Chay',
+// ];
 
-    if(plan){
-        const planDiv = document.createElement('div');
-        planDiv.className = 'plan';
-        planDiv.textContent = plan;
-        selectedDayElement.appendChild(planDiv);
-        input.value = "";
-        closeForm();
-    }
-}
+// const resultBox = document.querySelector('.result-box');
+// const inputBox = document.getElementById('input-plan-box');
 
+// inputBox.onkeyup = function() {
+//     let result = [];
+//     let input = inputBox.value;
+    
+//     if(input.length){
+//         result = availableKeywords.filter((keyword) => {
+//            return keyword.toLowerCase().includes(input.toLowerCase());
+//         });
+//     }
+//     display(result);
+
+//     if(!result.length){
+//         resultBox.innerHTML = '';
+//     }
+// }
+
+// function display(result){
+//     const content = result.map((list) => {
+//         return "<li onclick=selectInput(this)>" + list + "</li>"
+//     });
+
+//     resultBox.innerHTML = "<ul>" + content.join('') + "</ul>"
+// }
+
+// function selectInput(list){
+//     inputBox.value = list.innerHTML;
+//     resultBox.innerHTML = '';
+// }
+
+const planForm = document.getElementById('planForm');
+const updatePlan = document.getElementById('updateplanForm');
+
+document.getElementById('returnBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    planForm.style.display = 'none';
+});
+
+// document.getElementById('finishBtn').addEventListener('click', (e) => {
+//     e.preventDefault();
+//     planForm.style.display = 'none';
+// });
+
+document.getElementById('returnUpdateBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    updatePlan.style.display = 'none';
+});
+
+// document.getElementById('finishUpdateBtn').addEventListener('click', (e) => {
+//     e.preventDefault();
+//     updatePlan.style.display = 'none';
+// });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const settingSvg = document.querySelector('.setting-svg');
+    const planControl = document.querySelectorAll('.plan-main-control');
+    const addPlan = document.querySelectorAll('.add-svg');
+    const updateSvg = document.querySelectorAll('.update-plan');
+    const saveBtn = document.getElementById('finishBtn');
+
+
+    planControl.forEach(item => {
+        settingSvg.addEventListener('click', () => {
+            item.classList.toggle('hidden-box');
+        });
+    });
+
+    updateSvg.forEach(button => {
+        button.addEventListener('click', (e) => {
+            updatePlan.style.display = 'flex';
+        })
+    });
+
+
+    addPlan.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const mealType = e.currentTarget.getAttribute('data-meal');
+
+            const planFormText = document.getElementById('plan-type-text');
+
+            planFormText.textContent = mealType;
+
+            planForm.style.display = 'flex';
+        })
+    });
+
+    saveBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Create Plan Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+            didClose: () => {
+                document.getElementById('form-create').submit();
+            }
+        });
+
+    });
+
+
+    
+
+});

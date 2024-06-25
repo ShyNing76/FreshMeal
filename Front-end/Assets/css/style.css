@@ -23,7 +23,6 @@ a {
     color: #565656;
 }
 
-
 /* Animation */
 .hidden {
     opacity: 0;
@@ -405,6 +404,7 @@ nav ul li:hover .dropdown-menu {
     text-align: center;
     padding: 30px;
     line-height: 2;
+    width: 100%;
 }
 
 .footer h5 {

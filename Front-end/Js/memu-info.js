@@ -1,19 +1,18 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const decrementButton = document.getElementById('decrement');
     const incrementButton = document.getElementById('increment');
     const quantityInput = document.querySelector('.menu-info-quantity input');
 
-    decrementButton.addEventListener('click', () => {
+    decrementButton.addEventListener('click', (event) => {
+        event.preventDefault();
         let currentValue = parseInt(quantityInput.value);
         if (!isNaN(currentValue) && currentValue > 1) {
             quantityInput.value = currentValue - 1;
         }
     });
 
-    incrementButton.addEventListener('click', () => {
+    incrementButton.addEventListener('click', (event) => {
+        event.preventDefault();
         let currentValue = parseInt(quantityInput.value);
         if (!isNaN(currentValue)) {
             quantityInput.value = currentValue + 1;
@@ -26,11 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 let mealKit = document.getElementById("meal-kit");
 let prepareMeal = document.getElementById("prepare-meal");
 
-mealKit.addEventListener("click", () => {
+mealKit.addEventListener("click", (event) => {
+    event.preventDefault();
     toggleClass(mealKit, prepareMeal);
 })
 
-prepareMeal.addEventListener("click", () => {
+prepareMeal.addEventListener("click", (event) => {
+    event.preventDefault();
     toggleClass(prepareMeal, mealKit);
 })
 
