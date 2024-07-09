@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FreshMeal Admin Panel</title>
+
+    <link rel="icon" href="Assets/Images/logo.png" />
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="Assets/css/adminlte.min.css" />
+    <link rel="stylesheet" href="Assets/css/select2.min.css" />
+
+
+    <style>
+      .select2-container--default .select2-selection--single {
+        background-color: #fff;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        height: 41px;
+      }
+    </style>
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Main Header -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="admin.html" class="nav-link">Home</a>
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <!-- Add your notifications dropdown here -->
+            </div>
+          </li>
+          <!-- User Account Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="fas fa-user"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-user mr-2"></i> Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-sign-out-alt mr-2"></i> Sign out
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Sidebar -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="admin.html" class="brand-link">
+          <img src="Assets/Images/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light">FreshMeal Admin</span>
+        </a>
+      
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img src="Assets/Images/user/user1.jpg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Admin</a>
+            </div>
+          </div>
+      
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item">
+                <a href="admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="order-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-cutlery"></i>
+                  <p>
+                    Orders
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="menu-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-book"></i>
+                  <p>
+                    Product Menu
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="weeklyplan-admin.html" class="nav-link">
+                  <i class="nav-icon fa-solid fa-calendar-week"></i>
+                  <p>
+                    Weekly Plan
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customer-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>
+                    Customers
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+      
+      
+
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Orders</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Orders</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <section class="content">
+          <div class="container-fluid">
+      
+            <!-- Danh sách đơn hàng -->
+          
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Order List</h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <!-- Button trigger modal -->
+                    <div class="row" style="margin-bottom: 8px;">
+                      <div class="col-md-3">
+                        <select class="form-control">
+                          <option value="">Status</option>
+                          <option>Approve</option>
+                          <option>Delivery</option>
+                          <option>Finish</option>
+                          <option>Cancel</option>
+                          <option>Return/Refund</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-5"></div>
+
+                      <div class="col-md-4">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search by Order id"
+                          />
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                              <i class="fas fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Table -->
+                    <table
+                      id="example1"
+                      class="table table-bordered table-striped"
+                    >
+                      <thead>
+                        <tr>
+                          <tr>
+                            <th>ID Order</th>
+                            <th>Customer</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                          </tr>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="pages/examples/invoice.html">#12</a></td>
+                          <td>Long Do</td>
+                          <td>x5</td>
+                          <td>250.000đ</td>
+                          <td><span class="badge badge-success">Finish</span></td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-sm"
+                              data-toggle="modal"
+                              data-target="#orderDetailsModal"
+                            >
+                              <i class="fas fa-eye"></i> Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-info btn-sm"
+                              data-toggle="modal"
+                              data-target="#updateOrderModal"
+                            >
+                              <i class="fas fa-pencil-alt"></i> Update Order Status
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><a href="pages/examples/invoice.html">#12</a></td>
+                          <td>Long Do</td>
+                          <td>x5</td>
+                          <td>250.000đ</td>
+                          <td><span class="badge badge-success">Finish</span></td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-sm"
+                              data-toggle="modal"
+                              data-target="#orderDetailsModal"
+                            >
+                              <i class="fas fa-eye"></i> Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-info btn-sm"
+                              data-toggle="modal"
+                              data-target="#updateOrderModal"
+                            >
+                              <i class="fas fa-pencil-alt"></i> Update Order Status
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><a href="pages/examples/invoice.html">#12</a></td>
+                          <td>Long Do</td>
+                          <td>x5</td>
+                          <td>250.000đ</td>
+                          <td><span class="badge badge-success">Finish</span></td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-sm"
+                              data-toggle="modal"
+                              data-target="#orderDetailsModal"
+                            >
+                              <i class="fas fa-eye"></i> Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-info btn-sm"
+                              data-toggle="modal"
+                              data-target="#updateOrderModal"
+                            >
+                              <i class="fas fa-pencil-alt"></i> Update Order Status
+                            </button>
+                          </td>
+                        </tr>
+                        
+                        <!-- more rows -->
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+      
+            <!-- Chi tiết đơn hàng -->
+
+            <div class="modal fade" id="orderDetailsModal" tabindex="-1" role="dialog" aria-labelledby="orderDetailsLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="orderDetailsLabel">Order Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <strong>Customer information</strong>
+                        <p class="text-muted"><strong>Name: </strong>John Doe</p>
+                        <p class="text-muted"><strong>Address: </strong>123 Main St, Anytown, USA </p>
+                        <p class="text-muted"><Strong>Phone: </Strong>+1 800 123 4567</p>
+                        <p class="text-muted"><strong>Email: </strong>john.doe@example.com</p>
+                      </div>
+                      <div class="col-md-6">
+                        <strong>Order information</strong>
+                        <p class="text-muted"><strong>Order Date: </strong>29/06/2024</p>
+                        <p class="text-muted"><strong>Delivery Date: </strong>01/07/2024</p>
+                        <p class="text-muted"><strong>Shipping Method: </strong>Giao Hàng Tiết Kiệm</p>
+                        <p class="text-muted"><strong>Paying Method: </strong>COD (Cash On Delivery)</p>
+                        <p class="text-muted"><strong>Order Status: </strong><span class="badge badge-success">Finish</span></p>
+                      </div>
+                    </div>
+                    
+          
+                    <strong>List of dishes</strong>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Name of dish</th>
+                          <th>Meal Type</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Pizza</td>
+                          <td>Meal Kit</td>
+                          <td>2</td>
+                          <td>$20.00</td>
+                        </tr>
+                        <tr>
+                          <td>Burger</td>
+                          <td>Meal Kit</td>
+                          <td>1</td>
+                          <td>$10.00</td>
+                        </tr>
+                        <!-- Các dòng khác -->
+                      </tbody>
+                    </table>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <strong>Shipping Price</strong>
+                        <p class="text-muted">$10.00</p>
+                      </div>
+                      <div class="col-md-4">
+                        <strong>Discount</strong>
+                        <p class="text-muted">20% ($10.00)</p>  
+                      </div>
+                      <div class="col-md-4">
+                        <strong>Total Price</strong>
+                        <p class="text-muted">$50.00</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Update User Modal -->
+        <div
+        class="modal fade"
+        id="updateOrderModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="updateOrderModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Update Order Status</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form role="form">
+              <div class="modal-body">
+                
+                <div class="form-group">
+                  <label for="productTime">Status</label>
+                  <select
+                    class="form-control select2"
+                    data-placeholder="Select Status"
+                    style="width: 100%"
+                    required
+                  >
+                    <option value=""></option>
+                    <option>Approve</option>
+                    <option>Delivery</option>
+                    <option>Finish</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Update Status
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+            
+      
+            <!-- Thống kê đơn hàng -->
+            <div class="row">
+              <div class="col-md-4">
+                <div class="info-box">
+                  <span class="info-box-icon bg-info"><i class="fas fa-shopping-cart"></i></span>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Tổng số đơn hàng</span>
+                    <span class="info-box-number">1,410</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="info-box">
+                  <span class="info-box-icon bg-success"><i class="fas fa-dollar-sign"></i></span>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Doanh thu</span>
+                    <span class="info-box-number">$3,210.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="info-box">
+                  <span class="info-box-icon bg-warning"><i class="fas fa-sync-alt"></i></span>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Đơn hàng đang xử lý</span>
+                    <span class="info-box-number">220</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+          Anything you want
+        </div>
+        <strong>Copyright &copy; 2024 <a href="#">FreshMeal</a>.</strong> All rights reserved.
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Add Control Sidebar content here -->
+      </aside>
+      <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- jQuery -->
+    <script src="Js/jquery.min.js"></script>
+    <!-- Select 2 -->
+    <script src="Js/select2.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="Js/adminlte.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".select2").select2({
+          placeholder: "Select Gender",
+          width: "100%",
+        });
+      });
+    </script>
+  </body>
+</html>

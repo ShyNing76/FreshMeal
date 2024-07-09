@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FreshMeal Admin Panel</title>
+
+    <link rel="icon" href="Assets/Images/logo.png" />
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="Assets/css/adminlte.min.css" />
+    <link rel="stylesheet" href="Assets/css/select2.min.css" />
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Main Header -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="admin.html" class="nav-link">Home</a>
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <!-- Add your notifications dropdown here -->
+            </div>
+          </li>
+          <!-- User Account Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="fas fa-user"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-user mr-2"></i> Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-sign-out-alt mr-2"></i> Sign out
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Sidebar -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="admin.html" class="brand-link">
+          <img
+            src="Assets/Images/logo.png"
+            alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">FreshMeal Admin</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="Assets/Images/user/user1.jpg"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Admin</a>
+            </div>
+          </div>
+
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item">
+                <a href="admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="order-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-cutlery"></i>
+                  <p>Orders</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="menu-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-book"></i>
+                  <p>Product Menu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="weeklyplan-admin.html" class="nav-link">
+                  <i class="nav-icon fa-solid fa-calendar-week"></i>
+                  <p>Weekly Plan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customer-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>Customers</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0">Products Management</h1>
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Products Management</li>
+                </ol>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Products List</h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <!-- Button trigger modal -->
+                    <div class="row">
+                      <div class="col-md-5">
+                        <button
+                          type="button"
+                          class="btn btn-primary mb-2"
+                          data-toggle="modal"
+                          data-target="#addProductModal"
+                        >
+                          Add New Product
+                        </button>
+                      </div>
+
+                      <div class="col-md-3">
+                        <select class="form-control">
+                          <option value="">Status</option>
+                          <option value="Block">Block</option>
+                          <option value="Unblock">Unblock</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search Menu Product"
+                          />
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                              <i class="fas fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Table -->
+                    <table
+                      id="example1"
+                      class="table table-bordered table-striped"
+                    >
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Product Name</th>
+                          <th>Category</th>
+                          <th>Price</th>
+                          <th>Cooking Time</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Burger gà</td>
+                          <td>Thực phẩm nhanh</td>
+                          <td>$5.99</td>
+                          <td>10 Min</td>
+                          <td>Unblock</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-sm"
+                              data-toggle="modal"
+                              data-target="#detailProductModal"
+                            >
+                              <i class="fas fa-eye"></i> Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-info btn-sm"
+                              data-toggle="modal"
+                              data-target="#editProductModal"
+                            >
+                              <i class="fas fa-pencil-alt"></i> Update
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                              <i class="fa-solid fa-lock"></i> Block
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>Burger gà</td>
+                          <td>Thực phẩm nhanh</td>
+                          <td>$5.99</td>
+                          <td>10 Min</td>
+                          <td>Unblock</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-sm"
+                              data-toggle="modal"
+                              data-target="#detailProductModal"
+                            >
+                              <i class="fas fa-eye"></i> Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-info btn-sm"
+                              data-toggle="modal"
+                              data-target="#editProductModal"
+                            >
+                              <i class="fas fa-pencil-alt"></i> Update
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                              <i class="fa-solid fa-lock"></i> Block
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>Burger gà</td>
+                          <td>Thực phẩm nhanh</td>
+                          <td>$5.99</td>
+                          <td>10 Min</td>
+                          <td>Unblock</td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-success btn-sm"
+                              data-toggle="modal"
+                              data-target="#detailProductModal"
+                            >
+                              <i class="fas fa-eye"></i> Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-info btn-sm"
+                              data-toggle="modal"
+                              data-target="#editProductModal"
+                            >
+                              <i class="fas fa-pencil-alt"></i> Update
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                              <i class="fa-solid fa-lock"></i> Block
+                            </button>
+                          </td>
+                        </tr>
+                        <!-- more rows -->
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+
+        <!-- Add product Modal -->
+        <div
+          class="modal fade"
+          id="addProductModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="addProductLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addProductLabel">
+                  Add New Product
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form role="form">
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="productName"
+                      placeholder="Enter Product Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select
+                      class="form-control select2"
+                      multiple="multiple"
+                      data-placeholder="Choose Category"
+                      style="width: 100%"
+                    >
+                      <option value="">Choose Category</option>
+                      <option>Noodle</option>
+                      <option>Rice</option>
+                      <option>Diet</option>
+                      <option>Rolls</option>
+                      <option>Veggie</option>
+                      <option>Foreign Food</option>
+                      <option>Hotpot</option>
+                      <option>Deserts</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Product Discription</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Product Discription"
+                    ></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="productPrice">Price</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="productPrice"
+                          placeholder="Enter Price"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="productTime">Cooking Time</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="productTime"
+                          placeholder="Enter Cooking Time"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="productImage">Food Image</label>
+                    <input
+                      type="file"
+                      class="form-control-file"
+                      id="productImage"
+                    />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Add New Product
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal for product details -->
+        <div
+          class="modal fade"
+          id="detailProductModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="detailProductLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="detailOrderLabel">
+                  Product Details
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <img
+                    src="Assets/Images/food/food1.jpg"
+                    alt=""
+                    style="width: 100%"
+                  />
+                </div>
+
+                <p><strong>Product Name:</strong> Burger gà</p>
+
+                <p><strong>List of Category:</strong></p>
+                <ul>
+                  <li>Noodle</li>
+                  <li>Diet</li>
+                  <!-- Thêm các sản phẩm khác vào đây -->
+                </ul>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p><strong>Price:</strong> 30000đ</p>
+                  </div>
+                  <div class="col-md-6">
+                    <p>
+                      <strong>Cooking Time:</strong>30 Min
+                    </p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Product Discription</label>
+                  <textarea class="form-control" rows="5" readonly>
+Sườn xào chua ngọt là một món ăn truyền thống của Việt Nam, nổi bật với sự kết hợp hoàn hảo giữa vị chua, ngọt, mặn và thơm. Món ăn này được chế biến từ sườn heo non, được chiên giòn rồi xào với nước sốt chua ngọt đậm đà từ giấm, đường, nước mắm và cà chua. Hương vị phong phú của món ăn được làm nổi bật thêm bởi các loại rau củ như hành tây, ớt chuông và dứa. Sườn xào chua ngọt không chỉ hấp dẫn bởi màu sắc rực rỡ mà còn bởi hương vị thơm ngon, tạo nên một trải nghiệm ẩm thực khó quên. Món ăn này thường được dùng kèm với cơm trắng, tạo nên bữa ăn hài hòa và cân bằng dinh dưỡng.</textarea
+                  >
+                </div>
+
+                <p><strong>Recipe Instruction:</strong></p>
+                <ol>
+                  <li>Recepi 1</li>
+                  <li>Recepi 2</li>
+                  <!-- Thêm các sản phẩm khác vào đây -->
+                </ol>
+
+                <p><strong>Ingredient:</strong></p>
+                <ol>
+                  <li>Ingredient 1</li>
+                  <li>Ingredient 2</li>
+                  <!-- Thêm các sản phẩm khác vào đây -->
+                </ol>
+
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Đóng
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Update modal -->
+        <div
+          class="modal fade"
+          id="editProductModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="editProductLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editProductLabel">
+                  Cập Nhật Sản Phẩm
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form role="form">
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="productName"
+                      placeholder="Enter Product Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select
+                      class="form-control select2"
+                      multiple="multiple"
+                      data-placeholder="Choose Category"
+                      style="width: 100%"
+                    >
+                      <option value="">Choose Category</option>
+                      <option>Noodle</option>
+                      <option>Rice</option>
+                      <option>Diet</option>
+                      <option>Rolls</option>
+                      <option>Veggie</option>
+                      <option>Foreign Food</option>
+                      <option>Hotpot</option>
+                      <option>Deserts</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Product Discription</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Product Discription"
+                    ></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="productPrice">Price</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="productPrice"
+                          placeholder="Enter Price"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="productTime">Cooking Time</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="productTime"
+                          placeholder="Enter Cooking Time"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="productImage">Food Image</label>
+                    <input
+                      type="file"
+                      class="form-control-file"
+                      id="productImage"
+                    />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Add New Product
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">Anything you want</div>
+        <strong>Copyright &copy; 2024 <a href="#">FreshMeal</a>.</strong> All
+        rights reserved.
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Add Control Sidebar content here -->
+      </aside>
+      <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- jQuery -->
+    <script src="Js/jquery.min.js"></script>
+    <!-- Select 2 -->
+    <script src="Js/select2.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="Js/adminlte.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".select2").select2({
+          placeholder: "Choose Category",
+          width: "100%",
+          multiple: true,
+        });
+      });
+    </script>
+  </body>
+</html>

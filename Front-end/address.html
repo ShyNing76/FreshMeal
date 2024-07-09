@@ -82,10 +82,11 @@
       <main>
         <div class="container-user">
           <!-- side-user -->
+          <!-- <p:Profile_SideBar_Tag userID="${user.userID}" /> -->
           <div class="side-menu">
             <div class="side-img-user">
               <a href="profile.html">
-                <img src="Assets/Images/user/user1.jpg" alt="User Image" />
+                <img src="Assets/Images/user/user1.jpg" alt="" />
                 <span>ShyNing76</span>
               </a>
             </div>
@@ -97,15 +98,17 @@
                 </a>
               </div>
               <div class="profile-item">
-                <a href="profile.html">
-                  <span>Profile</span>
-                </a>
-                <a href="address.html">
-                  <span>Address</span>
-                </a>
-                <a href="passwordchange.html">
-                  <span>Change Password</span>
-                </a>
+                <div>
+                  <a href="profile.html">
+                    <span>Profile</span>
+                  </a>
+                  <a href="address.html">
+                    <span>Address</span>
+                  </a>
+                  <a href="passwordchange.html">
+                    <span>Change Password</span>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="side-user">
@@ -159,38 +162,9 @@
                             </div>
                           </div>
                           <div class="update-delete-address">
-                            <button class="update-address-btn update-button">Update</button>
-                            <button class="delete-address-btn">Delete</button>
-                          </div>
-                        </div>
-                        <div role="heading" class="address-heading-section">
-                          <div class="address-user-contain">
-                            <div class="address-user">
-                              <div role="row" class="address-text">
-                                Vinhomegranpark, S702, Nguyễn Xiển Phường Long
-                                Bình, Thành Phố Thủ Đức, TP. Hồ Chí Minh
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Repeat the Address Item for other addresses -->
-                    <div class="address-contain">
-                      <div class="address-main">
-                        <div role="heading" class="address-heading-section">
-                          <div class="address-user-contain">
-                            <span class="name-address-section">
-                              <div class="name-address">Đỗ Duy Long</div>
-                            </span>
-                            <div class="separate-line"></div>
-                            <div role="row" class="phone-address-user">
-                              0792694351
-                            </div>
-                          </div>
-                          <div class="update-delete-address">
-                            <button class="update-address-btn update-button">Update</button>
+                            <button class="update-address-btn update-button">
+                              Update
+                            </button>
                             <button class="delete-address-btn">Delete</button>
                           </div>
                         </div>
@@ -220,7 +194,9 @@
                             </div>
                           </div>
                           <div class="update-delete-address">
-                            <button class="update-address-btn update-button">Update</button>
+                            <button class="update-address-btn update-button">
+                              Update
+                            </button>
                             <button class="delete-address-btn">Delete</button>
                           </div>
                         </div>
@@ -236,44 +212,57 @@
                         </div>
                       </div>
                     </div>
-                    <!-- End of Address Item -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </main>
 
-      <aside id="addressForm" class="form-container" role="dialog" tabindex="0" >
+      <aside id="addressForm" class="form-container" role="dialog" tabindex="0">
         <div class="form-address">
           <div class="form-address-item">
             <div class="form-address-text">New Address</div>
-            <form action="">
+            <form action="#" action="POST">
               <div class="inside-form">
                 <div class="form-main-content">
                   <div class="form-main-item">
                     <div class="form-main name-item">
                       <div class="form-main-contain">
-                        <input
-                          class="form-input"
-                          type="text"
-                          placeholder="Name"
-                          maxlength="64"
-                          value=""
-                        />
+                        <select>
+                          <option value="">SELECT DISTRICT</option>
+                          <option value="1">Thành Phố Thủ Đức</option>
+                          <option value="2">Quận 1</option>
+                          <option value="3">Quận 2</option>
+                          <option value="4">Quận 3</option>
+                          <option value="5">Quận 4</option>
+                          <option value="6">Quận 5</option>
+                          <option value="7">Quận 6</option>
+                          <option value="8">Quận 7</option>
+                          <option value="9">Quận 8</option>
+                          <option value="10">Quận 9</option>
+                          <option value="11">Quận 10</option>
+                          <option value="12">Quận 11</option>
+                          <option value="13">Quận 12</option>
+                          <option value="14">Quận Bình Tân</option>
+                          <option value="15">Quận Bình Thạnh</option>
+                          <option value="16">Quận Gò Vấp</option>
+                          <option value="17">Quận Phú Nhuận</option>
+                          <option value="18">Quận Tân Bình</option>
+                          <option value="19">Quận Tân Phú</option>
+                          <option value="20">Huyện Bình Chánh</option>
+                          <option value="21">Huyện Cần Giờ</option>
+                          <option value="22">Huyện Củ Chi</option>
+                          <option value="23">Huyện Hóc Môn</option>
+                          <option value="24">Huyện Nhà Bè</option>
+                        </select>
                       </div>
                     </div>
                     <div class="seperate-box"></div>
                     <div class="form-main phone-item">
                       <div class="form-main-contain">
-                        <input
-                          class="form-input"
-                          type="text"
-                          placeholder="Phone"
-                          value=""
-                        />
+                        <p>HỒ CHÍ MINH CITY</p>
                       </div>
                     </div>
                   </div>
@@ -295,7 +284,7 @@
                 <div class="form-button">
                   <button id="returnBtn" class="button">Return</button>
                   <div class="seperate-box"></div>
-                  <button id="finishBtn" class="button dark-btn">Finish</button>
+                  <button type="submit" class="button dark-btn">Finish</button>
                 </div>
               </div>
             </form>
@@ -305,7 +294,12 @@
       </aside>
 
       <!-- Form update -->
-      <aside id="updateAddressForm" class="form-container" role="dialog" tabindex="0" >
+      <aside
+        id="updateAddressForm"
+        class="form-container"
+        role="dialog"
+        tabindex="0"
+      >
         <div class="form-address">
           <div class="form-address-item">
             <div class="form-address-text">Update Address</div>
@@ -315,24 +309,45 @@
                   <div class="form-main-item">
                     <div class="form-main name-item">
                       <div class="form-main-contain">
-                        <input
-                          class="form-input"
-                          type="text"
-                          placeholder="Name"
-                          maxlength="64"
-                          value="Đỗ Duy Long"
-                        />
+                        <select>
+                          <option value="">${district}</option>
+                          <option value="1">Thành Phố Thủ Đức</option>
+                          <option value="2">Quận 1</option>
+                          <option value="3">Quận 2</option>
+                          <option value="4">Quận 3</option>
+                          <option value="5">Quận 4</option>
+                          <option value="6">Quận 5</option>
+                          <option value="7">Quận 6</option>
+                          <option value="8">Quận 7</option>
+                          <option value="9">Quận 8</option>
+                          <option value="10">Quận 9</option>
+                          <option value="11">Quận 10</option>
+                          <option value="12">Quận 11</option>
+                          <option value="13">Quận 12</option>
+                          <option value="14">Quận Bình Tân</option>
+                          <option value="15">Quận Bình Thạnh</option>
+                          <option value="16">Quận Gò Vấp</option>
+                          <option value="17">Quận Phú Nhuận</option>
+                          <option value="18">Quận Tân Bình</option>
+                          <option value="19">Quận Tân Phú</option>
+                          <option value="20">Huyện Bình Chánh</option>
+                          <option value="21">Huyện Cần Giờ</option>
+                          <option value="22">Huyện Củ Chi</option>
+                          <option value="23">Huyện Hóc Môn</option>
+                          <option value="24">Huyện Nhà Bè</option>
+                        </select>
                       </div>
                     </div>
                     <div class="seperate-box"></div>
                     <div class="form-main phone-item">
                       <div class="form-main-contain">
-                        <input
-                          class="form-input"
-                          type="text"
-                          placeholder="Phone"
-                          value="0792694351"
-                        />
+                        <!--                                                <input
+                                                                                            class="form-input"
+                                                                                            type="text"
+                                                                                            placeholder="Phone"
+                                                                                            value="0792694351"
+                                                                                            />-->
+                        <p>HỒ CHÍ MINH CITY</p>
                       </div>
                     </div>
                   </div>
@@ -345,7 +360,9 @@
                             rows="4"
                             placeholder="Address"
                             maxlength="256"
-                            >Vinhomegranpark, S702, Nguyễn Xiển Phường Long Bình, Thành Phố Thủ Đức, TP. Hồ Chí Minh</textarea>
+                          >
+Vinhomegranpark, S702, Nguyễn Xiển Phường Long Bình, Thành Phố Thủ Đức, TP. Hồ Chí Minh</textarea
+                          >
                         </div>
                       </div>
                     </div>
@@ -354,7 +371,7 @@
                 <div class="form-button">
                   <button id="returnBtn" class="button">Return</button>
                   <div class="seperate-box"></div>
-                  <button id="finishBtn" class="button dark-btn">Finish</button>
+                  <button type="submit" class="button dark-btn">Finish</button>
                 </div>
               </div>
             </form>

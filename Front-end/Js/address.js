@@ -12,15 +12,16 @@ document.querySelectorAll('.update-button').forEach(button => {
     })
 })
 
-document.getElementById('returnBtn').addEventListener('click', () => {
+document.getElementById('returnBtn').addEventListener('click', (e) => {
+    e.preventDefault();
     addressForm.style.display = 'none';
     updateAddress.style.display = 'none';
 });
 
-document.getElementById('finishBtn').addEventListener('click', () => {
-    addressForm.style.display = 'none';
-    updateAddress.style.display = 'none';
-});
+// document.getElementById('finishBtn').addEventListener('click', () => {
+//     addressForm.style.display = 'none';
+//     updateAddress.style.display = 'none';
+// });
 
 
 document.addEventListener("DOMContentLoaded", function() {

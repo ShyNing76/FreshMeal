@@ -46,7 +46,7 @@
 
 .quantity-cart{
     display: inline-flex;
-    padding: 10px 25px;
+    justify-content: flex-start;
 }
 
 .cart-bottom{

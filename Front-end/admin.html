@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FreshMeal Admin Panel</title>
+
+    <link rel="icon" href="Assets/Images/logo.png" />
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="Assets/css/adminlte.min.css" />
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Main Header -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="admin.html" class="nav-link">Home</a>
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <!-- Add your notifications dropdown here -->
+            </div>
+          </li>
+          <!-- User Account Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="fas fa-user"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-user mr-2"></i> Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-sign-out-alt mr-2"></i> Sign out
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Sidebar -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="admin.html" class="brand-link">
+          <img src="Assets/Images/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light">FreshMeal Admin</span>
+        </a>
+      
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img src="Assets/Images/user/user1.jpg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Admin</a>
+            </div>
+          </div>
+      
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item">
+                <a href="admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="order-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-cutlery"></i>
+                  <p>
+                    Orders
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="menu-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-book"></i>
+                  <p>
+                    Product Menu
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="weeklyplan-admin.html" class="nav-link">
+                  <i class="nav-icon fa-solid fa-calendar-week"></i>
+                  <p>
+                    Weekly Plan
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="customer-admin.html" class="nav-link">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>
+                    Customers
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+      
+
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Dashboard</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="admin.html">Home</a></li>
+                  <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+      
+        <section class="content">
+          <div class="container-fluid">
+            <!-- Tổng quan -->
+            <div class="row">
+              <div class="col-lg-3 col-6">
+                <div class="small-box bg-info">
+                  <div class="inner">
+                    <h3>150</h3>
+                    <p>Total Orders</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion fa-solid fa-bag-shopping"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <div class="small-box bg-success">
+                  <div class="inner">
+                    <h3>100,000đ</h3>
+                    <p>Today Revenue</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion fa-solid fa-money-bills"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <div class="small-box bg-warning">
+                  <div class="inner">
+                    <h3>44</h3>
+                    <p>Total Customer</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion fa-solid fa-user"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <div class="small-box bg-danger">
+                  <div class="inner">
+                    <h3>65</h3>
+                    <p>Total Product</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion fa-solid fa-bowl-food"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">Details <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Biểu đồ -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Revenue Chart</h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart">
+                      <canvas id="revenueChart" style="height: 230px; min-height: 230px;"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Orders Chart</h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart">
+                      <canvas id="orderChart" style="height: 230px; min-height: 230px;"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Đơn hàng mới nhất -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header border-transparent">
+                    <h3 class="card-title">Latest orders</h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="table-responsive">
+                      <table class="table m-0">
+                        <thead>
+                          <tr>
+                            <th>ID Order</th>
+                            <th>Customer</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="pages/examples/invoice.html">#12</a></td>
+                            <td>Long Do</td>
+                            <td>x5</td>
+                            <td>250.000đ</td>
+                            <td><span class="badge badge-success">FINISH</span></td>
+                          </tr>
+                          <tr>
+                            <td><a href="pages/examples/invoice.html">#12</a></td>
+                            <td>Long Do</td>
+                            <td>x5</td>
+                            <td>250.000đ</td>
+                            <td><span class="badge badge-success">FINISH</span></td>
+                          </tr>
+                          <!-- Các dòng khác -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="card-footer clearfix">
+                    <a href="order-admin.html" class="btn btn-sm btn-secondary float-right">Xem tất cả đơn hàng</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Món ăn bán chạy -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Best-selling dish</h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul class="products-list product-list-in-card pl-2 pr-2">
+                      <li class="item">
+                        <div class="product-img">
+                          <img src="Assets/Images/food/food9.jpg" alt="Product Image" class="img-size-50">
+                        </div>
+                        <div class="product-info">
+                          <a href="javascript:void(0)" class="product-title">Món A
+                            <span class="badge badge-warning float-right">180.000đ</span></a>
+                          <span class="product-description">
+                            200 orders sold
+                          </span>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="product-img">
+                          <img src="Assets/Images/food/food9.jpg" alt="Product Image" class="img-size-50">
+                        </div>
+                        <div class="product-info">
+                          <a href="javascript:void(0)" class="product-title">Món A
+                            <span class="badge badge-warning float-right">180.000đ</span></a>
+                          <span class="product-description">
+                            200 orders sold
+                          </span>
+                        </div>
+                      </li>
+                      <!-- Các dòng khác -->
+                    </ul>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="javascript:void(0)" class="uppercase">Show all menu</a>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Đánh giá và phản hồi -->
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Latest customer list</h3>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <ul class="products-list product-list-in-card pl-2 pr-2">
+                      <li class="item">
+                        <div class="product-img">
+                          <img src="Assets/Images/user/user1.jpg" alt="User Image" class="img-size-50">
+                        </div>
+                        <div class="product-info">
+                          <a href="javascript:void(0)" class="product-title">John Doe
+                            <span class="badge badge-info float-right">New Customer</span></a>
+                          <span class="product-description">
+                            Registered on June 1, 2024
+                          </span>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="product-img">
+                          <img src="Assets/Images/user/user1.jpg" alt="User Image" class="img-size-50">
+                        </div>
+                        <div class="product-info">
+                          <a href="javascript:void(0)" class="product-title">Jane Smith
+                            <span class="badge badge-info float-right">New Customer</span></a>
+                          <span class="product-description">
+                            Registered on June 7, 2024
+                          </span>
+                        </div>
+                      </li>
+                      <!-- Các dòng khác -->
+                    </ul>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="javascript:void(0)" class="uppercase">Show All Customer</a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+      
+          </div>
+        </section>
+      </div>
+      
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+          Anything you want
+        </div>
+        <strong>Copyright &copy; 2024 <a href="#">FreshMeal</a>.</strong> All rights reserved.
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Add Control Sidebar content here -->
+      </aside>
+      <div class="control-sidebar-bg"></div>
+    </div>
+
+    
+    <!-- jQuery -->
+    <script src="Js/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="Js/adminlte.min.js"></script>
+    
+  </body>
+</html>

@@ -125,7 +125,7 @@
 .checkout-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    padding: 50px 0;
 }
 
 .stardust-radio {
